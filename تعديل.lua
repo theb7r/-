@@ -14,23 +14,23 @@ return send(msg.chat_id,msg_id,"*⇜  عذرا عزيزي مايمديك تست�
 elseif Redis:sismember(Zelzal.."Zelzal:MalekAsase:Group",UserInfo) then
 return send(msg.chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تستخدم الامر على (المالك الاساسي)*","md",true)  
 elseif Redis:sismember(Zelzal.."Zelzal:DevelopersQ:Groups",UserInfo) or Redis:sismember(Zelzal.."Zelzal:MevelopersQ:Groups",UserInfo) then
-return send(msg.chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تستخدم الامر على لمطور الثانويا*","md",true)  
+return send(msg.chat_id,msg_id,"*⇜Dev🎖️ عذرا عزيزي مايمديك تستخدم الامر على  *","md",true)  
 elseif Redis:sismember(Zelzal.."Zelzal:Developers:Groups",UserInfo) or Redis:sismember(Zelzal.."Zelzal:Mevelopers:Groups",UserInfo) then
-return send(msg.chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين المطور*","md",true)  
+return send(msg.chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تسىخدم الامر على (Myth)*","md",true)  
 end
 local Message_Reply = bot.getMessage(msg.chat_id, msg.reply_to_message_id)
 Redis:sadd(Zelzal.."mero:tahaath"..msg.chat_id, Message_Reply.sender_id.user_id)
-return send(msg.chat_id,msg_id,"*⇜ اهلا عزيزي\n⇜ تم رفع العضو اثول الگروب🤪بنجاح\n⇜ تمت إضافته إلى قائمه الثولان😹\n✓️*","md") 
-elseif text== ""  and msg.reply_to_message_id and not Redis:get(Zelzal.."amrthshesh"..msg.chat_id) then    
+return send(msg.chat_id,msg_id,"*⇜ اهلا عزيزي\n⇜ تم رفع العضو الى هطف\n⇜ تمت اضافته الى قائمه الهطوف\n✓️*","md") 
+elseif text== "رفع هطف"  and msg.reply_to_message_id and not Redis:get(Zelzal.."amrthshesh"..msg.chat_id) then    
 if UserInfo and UserInfo.type and UserInfo.type.luatele == "userTypeBot" then
-return send(msg.chat_id,msg_id,"\n*⇜ هييه ياورع .. مايمديك تهينني ؟!*","md",true)  
+return send(msg.chat_id,msg_id,"\n*⇜ مايمديك تستخدم الامر على البوت!*","md",true)  
 end
 local Message_Reply = bot.getMessage(msg.chat_id, msg.reply_to_message_id)
 Redis:srem(Zelzal.."mero:tahaath"..msg.chat_id, Message_Reply.sender_id.user_id)
-return send(msg.chat_id,msg_id,"*⇜ اهلا عزيزي\n⇜ تم تنزيل العضو من ثولان الكروب\n⇜ تمت الزاله من قامة الثولان😹\n✓️*","md") 
-elseif text== ""  and msg.reply_to_message_id and not Redis:get(Zelzal.."amrthshesh"..msg.chat_id) then    
+return send(msg.chat_id,msg_id,"*⇜ اهلا عزيزي\n⇜ تم تنزيل العضو هطف\n⇜ تمت تنزيله من قائمه الهطوف\n✓️*","md") 
+elseif text== "تنزيل هطف"  and msg.reply_to_message_id and not Redis:get(Zelzal.."amrthshesh"..msg.chat_id) then    
 if UserInfo and UserInfo.type and UserInfo.type.luatele == "userTypeBot" then
-return send(msg.chat_id,msg_id,"\n*⇜ هييه ياورع .. مايمديك تهينني ؟!*","md",true)  
+return send(msg.chat_id,msg_id,"\n*⇜مايمديك تستخدم الامر على البوت ؟!*","md",true)  
 end
 if Redis:sismember(Zelzal.."Zelzal:Text:Cmd:Lock"..msg_chat_id,text) then
 if Locks_Status(msg.sender_id.user_id,msg,text) ~= "noon" then
@@ -38,22 +38,22 @@ return send(msg_chat_id,msg_id,Locks_Status(msg.sender_id.user_id,msg,text),"md"
 end
 end
 if UserInfo.id == 6616199029 or UserInfo.id == 6616199029 or UserInfo.id == 6616199029 then
-return send(msg.chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين مبرمج السورس*","md",true)  
+return send(msg.chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تستخدم الامر على (مبرمج السورس)*","md",true)  
 elseif UserInfo.id == 6616199029 then
-return send(msg.chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين مطور السورس*","md",true)  
+return send(msg.chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تستخدم الامر على (مطور السورس)*","md",true)  
 elseif Redis:sismember(Zelzal.."Zelzal:MalekAsase:Group",UserInfo) then
-return send(msg.chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين المالك الاساسي*","md",true)  
+return send(msg.chat_id,msg_id,"*⇜عذرا عزيزي مايمديك تستخدم الامر على (المالك الاساسي)*","md",true)  
 elseif Redis:sismember(Zelzal.."Zelzal:DevelopersQ:Groups",UserInfo) or Redis:sismember(Zelzal.."Zelzal:MevelopersQ:Groups",UserInfo) then
-return send(msg.chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين المطور الثانوي*","md",true)  
+return send(msg.chat_id,msg_id,"*⇜Dev🎖️عذرا عزيزي مايمديك تستخدم الامر على *","md",true)  
 elseif Redis:sismember(Zelzal.."Zelzal:Developers:Groups",UserInfo) or Redis:sismember(Zelzal.."Zelzal:Mevelopers:Groups",UserInfo) then
-return send(msg.chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين المطور*","md",true)  
+return send(msg.chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تسىخدم الامر على (Myth)*","md",true)  
 end
 local Message_Reply = bot.getMessage(msg.chat_id, msg.reply_to_message_id)
 Redis:sadd(Zelzal.."mero:klp"..msg.chat_id, Message_Reply.sender_id.user_id)
-return send(msg.chat_id,msg_id,"*⇜ اهلا عزيزي\n⇜ تم رفع المتهم إلى جلب 🐕 بنجاح\n⇜ تمت إضافته إلى قائمه الجلاب😹\n✓️*","md") 
-elseif text== ""  and msg.reply_to_message_id and not Redis:get(Zelzal.."amrthshesh"..msg.chat_id) then    
+return send(msg.chat_id,msg_id,"*⇜ اهلا عزيزي\n⇜ تم رفع العضو إلى كلب  \n⇜ تم اضافته الى قائمه الكلاب\n✓️*","md") 
+elseif text== "تنزيل كلب  "  and msg.reply_to_message_id and not Redis:get(Zelzal.."amrthshesh"..msg.chat_id) then    
 if UserInfo and UserInfo.type and UserInfo.type.luatele == "userTypeBot" then
-return send(msg.chat_id,msg_id,"\n*⇜ هييه ياورع .. مايمديك تهينني ؟!*","md",true)  
+return send(msg.chat_id,msg_id,"\n*⇜ مايمديك تستخدم الامر على البوت !*","md",true)  
 end
 if Redis:sismember(Zelzal.."Zelzal:Text:Cmd:Lock"..msg_chat_id,text) then
 if Locks_Status(msg.sender_id.user_id,msg,text) ~= "noon" then
@@ -61,29 +61,29 @@ return send(msg_chat_id,msg_id,Locks_Status(msg.sender_id.user_id,msg,text),"md"
 end
 end
 if UserInfo.id == 6616199029 or UserInfo.id == 6616199029 or UserInfo.id == 6616199029 then
-return send(msg.chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين مبرمج السورس*","md",true)  
+return send(msg.chat_id,msg_id,"*⇜  عذرا عزيزي مايمديك تستخدم الامر على (مطور السورس)*","md",true)  
 elseif UserInfo.id == 6616199029 then
-return send(msg.chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين مطور السورس*","md",true)  
+return send(msg.chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تستخدم الامر على (مطور السورس)*","md",true)  
 elseif Redis:sismember(Zelzal.."Zelzal:MalekAsase:Group",UserInfo) then
-return send(msg.chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين المالك الاساسي*","md",true)  
+return send(msg.chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تستخدم الامر على (المالك الاساسي)*","md",true)  
 elseif Redis:sismember(Zelzal.."Zelzal:DevelopersQ:Groups",UserInfo) or Redis:sismember(Zelzal.."Zelzal:MevelopersQ:Groups",UserInfo) then
-return send(msg.chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين المطور الثانوي*","md",true)  
+return send(msg.chat_id,msg_id,"*⇜ Dev🎖️عذرا عزيزي مايمديك تستخدم الامر على*","md",true)  
 elseif Redis:sismember(Zelzal.."Zelzal:Developers:Groups",UserInfo) or Redis:sismember(Zelzal.."Zelzal:Mevelopers:Groups",UserInfo) then
-return send(msg.chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين المطور*","md",true)  
+return send(msg.chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تسىخدم الامر على (Myth)*","md",true)  
 end
 local Message_Reply = bot.getMessage(msg.chat_id, msg.reply_to_message_id)
 Redis:sadd(Zelzal.."mero:donke"..msg.chat_id, Message_Reply.sender_id.user_id)
-return send(msg.chat_id,msg_id,"*⇜ اهلا عزيزي\n⇜ تم رفع المتهم إلى مطي 🦓بنجاح\n⇜ تمت إضافته إلى قائمه المطايه😹\n✓️*","md") 
-elseif text== "تنزيل مطي"  and msg.reply_to_message_id and not Redis:get(Zelzal.."amrthshesh"..msg.chat_id) then    
+return send(msg.chat_id,msg_id,"*⇜ اهلا عزيزي\n⇜ تم رفع العضو إلى حمار  \n⇜ تم اضافته الى قائمه الحمير\n✓️*","md") 
+elseif text== "تنزيل حمار"  and msg.reply_to_message_id and not Redis:get(Zelzal.."amrthshesh"..msg.chat_id) then    
 if UserInfo and UserInfo.type and UserInfo.type.luatele == "userTypeBot" then
 return send(msg.chat_id,msg_id,"\n*⇜ هييه ياورع .. مايمديك تهينني ؟!*","md",true)  
 end
 local Message_Reply = bot.getMessage(msg.chat_id, msg.reply_to_message_id)
 Redis:srem(Zelzal.."mero:donke"..msg.chat_id, Message_Reply.sender_id.user_id)
-return send(msg.chat_id,msg_id,"*⇜ اهلا عزيزي\n⇜ تم تنزيل المتهم مطي بنجاح\n⇜ تمت ازالته من قائمه المطايه 🦓😹\n✓️*","md") 
+return send(msg.chat_id,msg_id,"*⇜ اهلا عزيزي\n⇜ تم تنزيل العضو حمار \n⇜ تمت ازالته من قائمه الخمير\n✓️*","md") 
 elseif text== "رفع بقره"  and msg.reply_to_message_id and not Redis:get(Zelzal.."amrthshesh"..msg.chat_id) then    
 if UserInfo and UserInfo.type and UserInfo.type.luatele == "userTypeBot" then
-return send(msg.chat_id,msg_id,"\n*⇜ هييه ياورع .. مايمديك تهينني ؟!*","md",true)  
+return send(msg.chat_id,msg_id,"\n*⇜ مايمديك تستخدم الامر على البوت *","md",true)  
 end
 if Redis:sismember(Zelzal.."Zelzal:Text:Cmd:Lock"..msg_chat_id,text) then
 if Locks_Status(msg.sender_id.user_id,msg,text) ~= "noon" then
@@ -91,7 +91,7 @@ return send(msg_chat_id,msg_id,Locks_Status(msg.sender_id.user_id,msg,text),"md"
 end
 end
 if UserInfo.id == 6616199029 or UserInfo.id == 6616199029 or UserInfo.id == 6616199029 then
-return send(msg.chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين مبرمج السورس*","md",true)  
+return send(msg.chat_id,msg_id,"*⇜عذرا عزيزي مايمديك تستخدم الامر على (مطور السورس)*","md",true)  
 elseif UserInfo.id == 6616199029 then
 return send(msg.chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين مطور السورس*","md",true)  
 elseif Redis:sismember(Zelzal.."Zelzal:MalekAsase:Group",UserInfo) then
