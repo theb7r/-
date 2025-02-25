@@ -42,7 +42,7 @@ if not Redis:sismember(Zelzal.."Zelzal:DevelopersQ:Groups",UserId_Info.id) then
 return send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ تم رفعه Dev🎖️مسبقا ").Reply,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:DevelopersQ:Groups",UserId_Info.id)
-send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜تم تنزيل Dev🎖️").Reply,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜تم تنزيله Dev🎖️").Reply,"md",true)  
 end
 end
 if UserName[1] == 'مطور' then
@@ -125,10 +125,10 @@ return send(msg_chat_id,msg_id,"*⇜ ( التنزيل ) معطل من قبل ا�
 end
 end
 if not Redis:sismember(Zelzal.."Zelzal:TheBasics:Group"..msg_chat_id,UserId_Info.id) then
-return send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ من قبل مو منشئ اساسي").Reply,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ تم تنزيله من منشئ اساسي مسبقا").Reply,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:TheBasics:Group"..msg_chat_id,UserId_Info.id) 
-send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ ابشر نزلته من منشئ اساسي ").Reply,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ تم تنزيله من منشئ اساسي").Reply,"md",true)  
 if Redis:get(Zelzal.."Zelzal:LogerGroupBot"..msg_chat_id) then
 local Get_Chat = bot.getChat(msg_chat_id)
 local Info_Chats = bot.getSupergroupFullInfo(msg_chat_id)
@@ -159,7 +159,7 @@ data = {
 }
 }
 local Loger_Id = Redis:get(Zelzal.."Zelzal:Loger:BotGroub"..msg.chat_id)
-send(Loger_Id,0,'\n*- مرحباً عزيزي المالك 🧚‍♀*\n*- هناك شخص قام بتنزيل احد من القروب 🤔*\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..twond.id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
+send(Loger_Id,0,'\n*- مرحباً عزيزي المالك *\n*- هناك شخص قام بتنزيل احد من القروب *\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..twond.id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
 end
 end
 end
@@ -186,10 +186,10 @@ return send(msg_chat_id,msg_id,"*⇜ ( التنزيل ) معطل من قبل ا�
 end
 end
 if not Redis:sismember(Zelzal.."Zelzal:Originators:Group"..msg_chat_id,UserId_Info.id) then
-return send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ من قبل مو منشئ  ").Reply,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ تم تنزيله من منشئ مسبقا  ").Reply,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:Originators:Group"..msg_chat_id,UserId_Info.id) 
-send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ ابشر نزلته من المنشئين ").Reply,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜تم تنزيله منشئ مسبقا ").Reply,"md",true)  
 if Redis:get(Zelzal.."Zelzal:LogerGroupBot"..msg_chat_id) then
 local Get_Chat = bot.getChat(msg_chat_id)
 local Info_Chats = bot.getSupergroupFullInfo(msg_chat_id)
@@ -220,7 +220,7 @@ data = {
 }
 }
 local Loger_Id = Redis:get(Zelzal.."Zelzal:Loger:BotGroub"..msg.chat_id)
-send(Loger_Id,0,'\n*- مرحباً عزيزي المالك 🧚‍♀*\n*- هناك شخص قام بتنزيل احد من القروب 🤔*\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..twond.id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
+send(Loger_Id,0,'\n*- مرحباً عزيزي المالك *\n*- هناك شخص قام بتنزيل احد من القروب *\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..twond.id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
 end
 end
 end
@@ -286,7 +286,7 @@ data = {
 }
 }
 local Loger_Id = Redis:get(Zelzal.."Zelzal:Loger:BotGroub"..msg.chat_id)
-send(Loger_Id,0,'\n*- مرحباً عزيزي المالك 🧚‍♀*\n*- هناك شخص قام بتنزيل احد من القروب 🤔*\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..twond.id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
+send(Loger_Id,0,'\n*- مرحباً عزيزي المالك *\n*- هناك شخص قام بتنزيل احد من القروب *\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..twond.id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
 end
 end
 end
@@ -330,10 +330,10 @@ return send(msg_chat_id,msg_id,"*⇜ ( التنزيل ) معطل من قبل ا�
 end
 end
 if not Redis:sismember(Zelzal.."Zelzal:Addictive:Group"..msg_chat_id,UserId_Info.id) then
-return send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ من قبل مو ادمن ").Reply,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ تم تنزيله ادمن مسبقا ").Reply,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:Addictive:Group"..msg_chat_id,UserId_Info.id) 
-send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ ابشر نزلته من الادمن ").Reply,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ تم تنزيله ادمن ").Reply,"md",true)  
 if Redis:get(Zelzal.."Zelzal:LogerGroupBot"..msg_chat_id) then
 local Get_Chat = bot.getChat(msg_chat_id)
 local Info_Chats = bot.getSupergroupFullInfo(msg_chat_id)
@@ -364,7 +364,7 @@ data = {
 }
 }
 local Loger_Id = Redis:get(Zelzal.."Zelzal:Loger:BotGroub"..msg.chat_id)
-send(Loger_Id,0,'\n*- مرحباً عزيزي المالك 🧚‍♀*\n*- هناك شخص قام بتنزيل احد من القروب 🤔*\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..twond.id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
+send(Loger_Id,0,'\n*- مرحباً عزيزي المالك *\n*- هناك شخص قام بتنزيل احد من القروب *\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..twond.id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
 end
 end
 end
@@ -401,10 +401,10 @@ return send(msg_chat_id,msg_id,"*⇜ ( التنزيل ) معطل من قبل ا�
 end
 end
 if not Redis:sismember(Zelzal.."Zelzal:Distinguished:Group"..msg_chat_id,UserId_Info.id) then
-return send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ من قبل مو مميز ").Reply,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ تم تنزيله مميز مسبقا ").Reply,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:Distinguished:Group"..msg_chat_id,UserId_Info.id) 
-send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ ابشر نزلته من المميزين ").Reply,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ تم تنزيله مميز ").Reply,"md",true)  
 if Redis:get(Zelzal.."Zelzal:LogerGroupBot"..msg_chat_id) then
 local Get_Chat = bot.getChat(msg_chat_id)
 local Info_Chats = bot.getSupergroupFullInfo(msg_chat_id)
@@ -435,7 +435,7 @@ data = {
 }
 }
 local Loger_Id = Redis:get(Zelzal.."Zelzal:Loger:BotGroub"..msg.chat_id)
-send(Loger_Id,0,'\n*- مرحباً عزيزي المالك 🧚‍♀*\n*- هناك شخص قام بتنزيل احد من القروب 🤔*\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..twond.id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
+send(Loger_Id,0,'\n*- مرحباً عزيزي المالك *\n*- هناك شخص قام بتنزيل احد من القروب *\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..twond.id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
 end
 end
 end
@@ -452,10 +452,10 @@ local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = Redis:get(
 return send(msg.chat_id,msg.id,'\n*⇜ عليك الاشتراك في قناة البوت ل استخدام الاوامر*',"md",true, false, false, false, reply_markup)
 end
 if not Redis:sismember(Zelzal.."Zelzal:MevelopersQ:Groups",UserId_Info.id) then
-return send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ من قبل مو مطوره ثانويه🎖️ ").Replly,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ تم تنزيه Dev🎖️مسبقا ").Replly,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:MevelopersQ:Groups",UserId_Info.id)
-send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ ابشر نزلتها من المطورات الثانويات🎖️").Replly,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ تم تنزيله Dev🎖️").Replly,"md",true)  
 end
 end
 if UserName[1] == 'مطوره' then
@@ -471,10 +471,10 @@ local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = Redis:get(
 return send(msg.chat_id,msg.id,'\n*⇜ عليك الاشتراك في قناة البوت ل استخدام الاوامر*',"md",true, false, false, false, reply_markup)
 end
 if not Redis:sismember(Zelzal.."Zelzal:Mevelopers:Groups",UserId_Info.id) then
-return send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ من قبل مو مطوره").Replly,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ تم تنزيله Myth مسبقا").Replly,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:Mevelopers:Groups",UserId_Info.id) 
-send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ ابشر نزلتها من قائمة المطورات ").Replly,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ تم تنزيله Myth ").Replly,"md",true)  
 end
 end
 if UserName[1] == "مالكه" then
@@ -524,7 +524,7 @@ data = {
 }
 }
 local Loger_Id = Redis:get(Zelzal.."Zelzal:Loger:BotGroub"..msg.chat_id)
-send(Loger_Id,0,'\n*- مرحباً عزيزي المالك 🧚‍♀*\n*- هناك شخص قام بتنزيل احد من القروب 🤔*\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..twond.id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
+send(Loger_Id,0,'\n*- مرحباً عزيزي المالك *\n*- هناك شخص قام بتنزيل احد من القروب *\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..twond.id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
 end
 end
 end
@@ -546,10 +546,10 @@ return send(msg_chat_id,msg_id,"*⇜ ( التنزيل ) معطل من قبل ا�
 end
 end
 if not Redis:sismember(Zelzal.."Zelzal:TheMasics:Group"..msg_chat_id,UserId_Info.id) then
-return send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ من قبل مو منشئه اساسيه").Replly,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜تم تنزيله من المنشئين الاساسيين مسبقا").Replly,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:TheMasics:Group"..msg_chat_id,UserId_Info.id) 
-send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ ابشر نزلتها من المنشئات الاساسيات ").Replly,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ تم تنزيله منشئ اساسي ").Replly,"md",true)  
 if Redis:get(Zelzal.."Zelzal:LogerGroupBot"..msg_chat_id) then
 local Get_Chat = bot.getChat(msg_chat_id)
 local Info_Chats = bot.getSupergroupFullInfo(msg_chat_id)
@@ -580,7 +580,7 @@ data = {
 }
 }
 local Loger_Id = Redis:get(Zelzal.."Zelzal:Loger:BotGroub"..msg.chat_id)
-send(Loger_Id,0,'\n*- مرحباً عزيزي المالك 🧚‍♀*\n*- هناك شخص قام بتنزيل احد من القروب 🤔*\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..twond.id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
+send(Loger_Id,0,'\n*- مرحباً عزيزي المالك *\n*- هناك شخص قام بتنزيل احد من القروب *\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..twond.id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
 end
 end
 end
@@ -607,10 +607,10 @@ return send(msg_chat_id,msg_id,"*⇜ ( التنزيل ) معطل من قبل ا�
 end
 end
 if not Redis:sismember(Zelzal.."Zelzal:Origimators:Group"..msg_chat_id,UserId_Info.id) then
-return send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ من قبل مو منشئه ").Replly,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ تم تنزيله منشئ مسبقا ").Replly,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:Origimators:Group"..msg_chat_id,UserId_Info.id) 
-send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ ابشر نزلتها من المنشئات ").Replly,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜تم تنزيله منشئ").Replly,"md",true)  
 if Redis:get(Zelzal.."Zelzal:LogerGroupBot"..msg_chat_id) then
 local Get_Chat = bot.getChat(msg_chat_id)
 local Info_Chats = bot.getSupergroupFullInfo(msg_chat_id)
@@ -641,7 +641,7 @@ data = {
 }
 }
 local Loger_Id = Redis:get(Zelzal.."Zelzal:Loger:BotGroub"..msg.chat_id)
-send(Loger_Id,0,'\n*- مرحباً عزيزي المالك 🧚‍♀*\n*- هناك شخص قام بتنزيل احد من القروب 🤔*\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..twond.id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
+send(Loger_Id,0,'\n*- مرحباً عزيزي المالك *\n*- هناك شخص قام بتنزيل احد من القروب *\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..twond.id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
 end
 end
 end
@@ -673,10 +673,10 @@ return send(msg_chat_id,msg_id,"*⇜ ( التنزيل ) معطل من قبل ا�
 end
 end
 if not Redis:sismember(Zelzal.."Zelzal:Mamagers:Group"..msg_chat_id,UserId_Info.id) then
-return send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ من قبل مو مديره ").Replly,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ تم تنزيله مدير مسبقا ").Replly,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:Mamagers:Group"..msg_chat_id,UserId_Info.id) 
-send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ ابشر نزلتها من قائمة المديرات ").Replly,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ تم تنزيله مدير ").Replly,"md",true)  
 if Redis:get(Zelzal.."Zelzal:LogerGroupBot"..msg_chat_id) then
 local Get_Chat = bot.getChat(msg_chat_id)
 local Info_Chats = bot.getSupergroupFullInfo(msg_chat_id)
@@ -707,7 +707,7 @@ data = {
 }
 }
 local Loger_Id = Redis:get(Zelzal.."Zelzal:Loger:BotGroub"..msg.chat_id)
-send(Loger_Id,0,'\n*- مرحباً عزيزي المالك 🧚‍♀*\n*- هناك شخص قام بتنزيل احد من القروب 🤔*\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..twond.id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
+send(Loger_Id,0,'\n*- مرحباً عزيزي المالك *\n*- هناك شخص قام بتنزيل احد من القروب *\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..twond.id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
 end
 end
 end
@@ -751,10 +751,10 @@ return send(msg_chat_id,msg_id,"*⇜ ( التنزيل ) معطل من قبل ا�
 end
 end
 if not Redis:sismember(Zelzal.."Zelzal:Mddictive:Group"..msg_chat_id,UserId_Info.id) then
-return send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ من قبل مو ادمونه ").Replly,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ تم تنزيله ادمن مسبقا ").Replly,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:Mddictive:Group"..msg_chat_id,UserId_Info.id) 
-send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ ابشر نزلتها من ادمونه ").Replly,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ تم تنزيله ادمن ").Replly,"md",true)  
 if Redis:get(Zelzal.."Zelzal:LogerGroupBot"..msg_chat_id) then
 local Get_Chat = bot.getChat(msg_chat_id)
 local Info_Chats = bot.getSupergroupFullInfo(msg_chat_id)
@@ -785,7 +785,7 @@ data = {
 }
 }
 local Loger_Id = Redis:get(Zelzal.."Zelzal:Loger:BotGroub"..msg.chat_id)
-send(Loger_Id,0,'\n*- مرحباً عزيزي المالك 🧚‍♀*\n*- هناك شخص قام بتنزيل احد من القروب 🤔*\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..twond.id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
+send(Loger_Id,0,'\n*- مرحباً عزيزي المالك *\n*- هناك شخص قام بتنزيل احد من القروب *\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..twond.id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
 end
 end
 end
@@ -827,10 +827,10 @@ return send(msg_chat_id,msg_id,"*⇜ ( التنزيل ) معطل من قبل ا�
 end
 end
 if not Redis:sismember(Zelzal.."Zelzal:Mistinguished:Group"..msg_chat_id,UserId_Info.id) then
-return send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ من قبل مو مميزه ").Replly,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ تم تنزيله مميز مسبقا ").Replly,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:Mistinguished:Group"..msg_chat_id,UserId_Info.id) 
-send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ ابشر نزلتها من المميزات ").Replly,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(UserId_Info.id,"⇜ تم تنزيله مميز ").Replly,"md",true)  
 if Redis:get(Zelzal.."Zelzal:LogerGroupBot"..msg_chat_id) then
 local Get_Chat = bot.getChat(msg_chat_id)
 local Info_Chats = bot.getSupergroupFullInfo(msg_chat_id)
@@ -861,7 +861,7 @@ data = {
 }
 }
 local Loger_Id = Redis:get(Zelzal.."Zelzal:Loger:BotGroub"..msg.chat_id)
-send(Loger_Id,0,'\n*- مرحباً عزيزي المالك 🧚‍♀*\n*- هناك شخص قام بتنزيل احد من القروب 🤔*\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..twond.id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
+send(Loger_Id,0,'\n*- مرحباً عزيزي المالك *\n*- هناك شخص قام بتنزيل احد من القروب *\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..twond.id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
 end
 end
 end
@@ -871,23 +871,23 @@ local TextMsg = text:match("^تنزيل (.*)$")
 local Message_Reply = bot.getMessage(msg.chat_id, msg.reply_to_message_id)
 local UserInfo = bot.getUser(Message_Reply.sender_id.user_id)
 if UserInfo.message == "Invalid user ID" then
-return send(msg_chat_id,msg_id,"\n*⇜ عذراً .. تستطيع فقط استخدام الامر على المستخدمين*","md",true)  
+return send(msg_chat_id,msg_id,"\n*⇜ عذراً لا تستطيع  استخدام الامر على *","md",true)  
 end
 if UserInfo and UserInfo.type and UserInfo.type.luatele == "userTypeBot" then
-return send(msg_chat_id,msg_id,"\n*⇜ هييه مايمديك تستخدم الامر علي ياورع ؟!*","md",true)  
+return send(msg_chat_id,msg_id,"\n*⇜ مايمديك تستخدم الامر على البوت!*","md",true)  
 end
-if TextMsg == 'مطور ثانوي' then
+if TextMsg == 'رفع Dev' then
 if not msg.ControllerBot then 
 return send(msg_chat_id,msg_id,'\n*⇜ هذا الامر يخص* ( '..Controller_Num(1)..' ) ',"md",true)  
 end
 if not Redis:sismember(Zelzal.."Zelzal:DevelopersQ:Groups",Message_Reply.sender_id.user_id) then
-return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ من قبل مو مطور ثانوي🎖️ ").Reply,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله Dev🎖️ مسبقا ").Reply,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:DevelopersQ:Groups",Message_Reply.sender_id.user_id) 
-send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ ابشر نزلته من المطورين الثانويين🎖️").Reply,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله Dev🎖️ ").Reply,"md",true)  
 end
 end
-if TextMsg == 'مطور' then
+if TextMsg == 'رفع My' then
 if not msg.DevelopersQ or not msg.MevelopersQ then
 return send(msg_chat_id,msg_id,'\n⇜ هذا الامر يخص { '..Controller_Num(2)..' } ',"md",true)  
 end
@@ -916,10 +916,10 @@ return send(msg_chat_id,msg_id,Locks_Status(msg.sender_id.user_id,msg,text),"md"
 end
 end
 if not Redis:sismember(Zelzal.."Zelzal:TheBasicsQ:Group"..msg_chat_id,Message_Reply.sender_id.user_id) then
-return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ من قبل مو مالك ").Reply,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله مالك مسبقا ").Reply,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:TheBasicsQ:Group"..msg_chat_id,Message_Reply.sender_id.user_id) 
-send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ ابشر نزلته من مالك ").Reply,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله مالك ").Reply,"md",true)  
 if Redis:get(Zelzal.."Zelzal:LogerGroupBot"..msg_chat_id) then
 local Get_Chat = bot.getChat(msg_chat_id)
 local Info_Chats = bot.getSupergroupFullInfo(msg_chat_id)
@@ -950,11 +950,11 @@ data = {
 }
 }
 local Loger_Id = Redis:get(Zelzal.."Zelzal:Loger:BotGroub"..msg.chat_id)
-send(Loger_Id,0,'\n*- مرحباً عزيزي المالك 🧚‍♀*\n*- هناك شخص قام بتنزيل احد من القروب 🤔*\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..Message_Reply.sender_id.user_id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
+send(Loger_Id,0,'\n*- مرحباً عزيزي المالك *\n*- هناك شخص قام بتنزيل احد من القروب *\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..Message_Reply.sender_id.user_id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
 end
 end
 end
-if TextMsg == "منشئ اساسي" then
+if TextMsg == "رفع منشئ اساسي" then
 if not msg.TheBasicsQ or not msg.TheMasicsQ then
 return send(msg_chat_id,msg_id,'\n*⇜ هذا الامر يخص ( المالك )*',"md",true)  
 end
@@ -977,10 +977,10 @@ return send(msg_chat_id,msg_id,"*⇜ ( التنزيل ) معطل من قبل ا�
 end
 end
 if not Redis:sismember(Zelzal.."Zelzal:TheBasics:Group"..msg_chat_id,Message_Reply.sender_id.user_id) then
-return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ من قبل مو منشئ اساسي ").Reply,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله منشئ اساسي مسبقا ").Reply,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:TheBasics:Group"..msg_chat_id,Message_Reply.sender_id.user_id) 
-send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ ابشر نزلته من منشئ اساسي ").Reply,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله منشئ اساسي ").Reply,"md",true)  
 if Redis:get(Zelzal.."Zelzal:LogerGroupBot"..msg_chat_id) then
 local Get_Chat = bot.getChat(msg_chat_id)
 local Info_Chats = bot.getSupergroupFullInfo(msg_chat_id)
@@ -1011,7 +1011,7 @@ data = {
 }
 }
 local Loger_Id = Redis:get(Zelzal.."Zelzal:Loger:BotGroub"..msg.chat_id)
-send(Loger_Id,0,'\n*- مرحباً عزيزي المالك 🧚‍♀*\n*- هناك شخص قام بتنزيل احد من القروب 🤔*\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..Message_Reply.sender_id.user_id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
+send(Loger_Id,0,'\n*- مرحباً عزيزي المالك *\n*- هناك شخص قام بتنزيل احد من القروب *\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..Message_Reply.sender_id.user_id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
 end
 end
 end
@@ -1043,10 +1043,10 @@ return send(msg_chat_id,msg_id,"*⇜ ( التنزيل ) معطل من قبل ا�
 end
 end
 if not Redis:sismember(Zelzal.."Zelzal:Originators:Group"..msg_chat_id,Message_Reply.sender_id.user_id) then
-return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ من قبل مو منشئ ").Reply,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله منشئ مسبقا ").Reply,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:Originators:Group"..msg_chat_id,Message_Reply.sender_id.user_id) 
-send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ ابشر نزلته من المنشئين ").Reply,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله منشئ ").Reply,"md",true)  
 if Redis:get(Zelzal.."Zelzal:LogerGroupBot"..msg_chat_id) then
 local Get_Chat = bot.getChat(msg_chat_id)
 local Info_Chats = bot.getSupergroupFullInfo(msg_chat_id)
@@ -1077,7 +1077,7 @@ data = {
 }
 }
 local Loger_Id = Redis:get(Zelzal.."Zelzal:Loger:BotGroub"..msg.chat_id)
-send(Loger_Id,0,'\n*- مرحباً عزيزي المالك 🧚‍♀*\n*- هناك شخص قام بتنزيل احد من القروب 🤔*\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..Message_Reply.sender_id.user_id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
+send(Loger_Id,0,'\n*- مرحباً عزيزي المالك *\n*- هناك شخص قام بتنزيل احد من القروب *\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..Message_Reply.sender_id.user_id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
 end
 end
 end
@@ -1114,10 +1114,10 @@ return send(msg_chat_id,msg_id,"*⇜ ( التنزيل ) معطل من قبل ا�
 end
 end
 if not Redis:sismember(Zelzal.."Zelzal:Managers:Group"..msg_chat_id,Message_Reply.sender_id.user_id) then
-return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ من قبل مو مدير ").Reply,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله مدير مسبقا ").Reply,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:Managers:Group"..msg_chat_id,Message_Reply.sender_id.user_id) 
-send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ ابشر نزلته من مدير ").Reply,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله مدير ").Reply,"md",true)  
 if Redis:get(Zelzal.."Zelzal:LogerGroupBot"..msg_chat_id) then
 local Get_Chat = bot.getChat(msg_chat_id)
 local Info_Chats = bot.getSupergroupFullInfo(msg_chat_id)
@@ -1148,7 +1148,7 @@ data = {
 }
 }
 local Loger_Id = Redis:get(Zelzal.."Zelzal:Loger:BotGroub"..msg.chat_id)
-send(Loger_Id,0,'\n*- مرحباً عزيزي المالك 🧚‍♀*\n*- هناك شخص قام بتنزيل احد من القروب 🤔*\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..Message_Reply.sender_id.user_id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
+send(Loger_Id,0,'\n*- مرحباً عزيزي المالك *\n*- هناك شخص قام بتنزيل احد من القروب *\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..Message_Reply.sender_id.user_id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
 end
 end
 end
@@ -1192,10 +1192,10 @@ return send(msg_chat_id,msg_id,"*⇜ ( التنزيل ) معطل من قبل ا�
 end
 end
 if not Redis:sismember(Zelzal.."Zelzal:Addictive:Group"..msg_chat_id,Message_Reply.sender_id.user_id) then
-return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ من قبل مو ادمن ").Reply,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله ادمن مسبقا ").Reply,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:Addictive:Group"..msg_chat_id,Message_Reply.sender_id.user_id) 
-send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ ابشر نزلته من ادمن ").Reply,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله ادمن ").Reply,"md",true)  
 if Redis:get(Zelzal.."Zelzal:LogerGroupBot"..msg_chat_id) then
 local Get_Chat = bot.getChat(msg_chat_id)
 local Info_Chats = bot.getSupergroupFullInfo(msg_chat_id)
@@ -1226,7 +1226,7 @@ data = {
 }
 }
 local Loger_Id = Redis:get(Zelzal.."Zelzal:Loger:BotGroub"..msg.chat_id)
-send(Loger_Id,0,'\n*- مرحباً عزيزي المالك 🧚‍♀*\n*- هناك شخص قام بتنزيل احد من القروب 🤔*\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..Message_Reply.sender_id.user_id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
+send(Loger_Id,0,'\n*- مرحباً عزيزي المالك *\n*- هناك شخص قام بتنزيل احد من القروب *\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..Message_Reply.sender_id.user_id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
 end
 end
 end
@@ -1268,10 +1268,10 @@ return send(msg_chat_id,msg_id,"*⇜ ( التنزيل ) معطل من قبل ا�
 end
 end
 if not Redis:sismember(Zelzal.."Zelzal:Distinguished:Group"..msg_chat_id,Message_Reply.sender_id.user_id) then
-return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ من قبل مو مميز ").Reply,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله مميز مسبقا ").Reply,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:Distinguished:Group"..msg_chat_id,Message_Reply.sender_id.user_id) 
-send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ ابشر نزلته من مميز ").Reply,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله مميز ").Reply,"md",true)  
 if Redis:get(Zelzal.."Zelzal:LogerGroupBot"..msg_chat_id) then
 local Get_Chat = bot.getChat(msg_chat_id)
 local Info_Chats = bot.getSupergroupFullInfo(msg_chat_id)
@@ -1302,7 +1302,7 @@ data = {
 }
 }
 local Loger_Id = Redis:get(Zelzal.."Zelzal:Loger:BotGroub"..msg.chat_id)
-send(Loger_Id,0,'\n*- مرحباً عزيزي المالك 🧚‍♀*\n*- هناك شخص قام بتنزيل احد من القروب 🤔*\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..Message_Reply.sender_id.user_id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
+send(Loger_Id,0,'\n*- مرحباً عزيزي المالك *\n*- هناك شخص قام بتنزيل احد من القروب *\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..Message_Reply.sender_id.user_id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
 end
 end
 end
@@ -1319,10 +1319,10 @@ local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = Redis:get(
 return send(msg.chat_id,msg.id,'\n*⇜ عليك الاشتراك في قناة البوت ل استخدام الاوامر*',"md",true, false, false, false, reply_markup)
 end
 if not Redis:sismember(Zelzal.."Zelzal:MevelopersQ:Groups",Message_Reply.sender_id.user_id) then
-return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ من قبل مو مطوره ثانويه🎖️ ").Replly,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله Dev🎖️مسبقا ").Replly,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:MevelopersQ:Groups",Message_Reply.sender_id.user_id) 
-send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ ابشر نزلتها من المطورات الثانويات🎖️").Replly,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله Dev🎖️").Replly,"md",true)  
 end
 end
 if TextMsg == 'مطوره' then
@@ -1338,10 +1338,10 @@ local reply_markup = bot.replyMarkup{type = 'inline',data = {{{text = Redis:get(
 return send(msg.chat_id,msg.id,'\n*⇜ عليك الاشتراك في قناة البوت ل استخدام الاوامر*',"md",true, false, false, false, reply_markup)
 end
 if not Redis:sismember(Zelzal.."Zelzal:Mevelopers:Groups",Message_Reply.sender_id.user_id) then
-return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ من قبل مو مطوره ").Replly,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله Myth مسبقا ").Replly,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:Mevelopers:Groups",Message_Reply.sender_id.user_id) 
-send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ ابشر نزلتها من قائمة المطورات ").Replly,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله Myth").Replly,"md",true)  
 end
 end
 if TextMsg == "مالكه" then
@@ -1357,10 +1357,10 @@ if statusvar == false then
 return send(msg_chat_id,msg_id,'*⇜ هذا الامر يخص ( مالك المجموعة ) او ( المالك الاساسي )*',"md",true)
 end
 if not Redis:sismember(Zelzal.."Zelzal:TheMasicsQ:Group"..msg_chat_id,Message_Reply.sender_id.user_id) then
-return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ من قبل مو مالكه ").Replly,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله مالكه مسبقا ").Replly,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:TheMasicsQ:Group"..msg_chat_id,Message_Reply.sender_id.user_id) 
-send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ ابشر نزلتها من المالكات ").Replly,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله مالكه ").Replly,"md",true)  
 if Redis:get(Zelzal.."Zelzal:LogerGroupBot"..msg_chat_id) then
 local Get_Chat = bot.getChat(msg_chat_id)
 local Info_Chats = bot.getSupergroupFullInfo(msg_chat_id)
@@ -1391,11 +1391,11 @@ data = {
 }
 }
 local Loger_Id = Redis:get(Zelzal.."Zelzal:Loger:BotGroub"..msg.chat_id)
-send(Loger_Id,0,'\n*- مرحباً عزيزي المالك 🧚‍♀*\n*- هناك شخص قام بتنزيل احد من القروب 🤔*\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..Message_Reply.sender_id.user_id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
+send(Loger_Id,0,'\n*- مرحباً عزيزي المالك *\n*- هناك شخص قام بتنزيل احد من القروب *\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..Message_Reply.sender_id.user_id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
 end
 end
 end
-if TextMsg == "منشئه اساسيه" then
+if TextMsg == "تنزيل منشئ اساسي" then
 if not msg.TheBasicsQ or not msg.TheMasicsQ then
 return send(msg_chat_id,msg_id,'\n*⇜ هذا الامر يخص ( المالك )*',"md",true)  
 end
@@ -1413,10 +1413,10 @@ return send(msg_chat_id,msg_id,"*⇜ ( التنزيل ) معطل من قبل ا�
 end
 end
 if not Redis:sismember(Zelzal.."Zelzal:TheMasics:Group"..msg_chat_id,Message_Reply.sender_id.user_id) then
-return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ من قبل مو منشئه اساسيه ").Replly,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله منشئ اساسي مسبقا ").Replly,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:TheMasics:Group"..msg_chat_id,Message_Reply.sender_id.user_id) 
-send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ ابشر نزلتها من المنشئات الاساسيات ").Replly,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله منشئ اساسي ").Replly,"md",true)  
 if Redis:get(Zelzal.."Zelzal:LogerGroupBot"..msg_chat_id) then
 local Get_Chat = bot.getChat(msg_chat_id)
 local Info_Chats = bot.getSupergroupFullInfo(msg_chat_id)
@@ -1447,11 +1447,11 @@ data = {
 }
 }
 local Loger_Id = Redis:get(Zelzal.."Zelzal:Loger:BotGroub"..msg.chat_id)
-send(Loger_Id,0,'\n*- مرحباً عزيزي المالك 🧚‍♀*\n*- هناك شخص قام بتنزيل احد من القروب 🤔*\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..Message_Reply.sender_id.user_id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
+send(Loger_Id,0,'\n*- مرحباً عزيزي المالك *\n*- هناك شخص قام بتنزيل احد من القروب *\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..Message_Reply.sender_id.user_id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
 end
 end
 end
-if TextMsg == "منشئه" then
+if TextMsg == "منشئ" then
 if not msg.TheBasics or not msg.TheMasics then
 return send(msg_chat_id,msg_id,'\n*⇜ هذا الامر يخص* ( '..Controller_Num(4)..' ) ',"md",true)  
 end
@@ -1474,10 +1474,10 @@ return send(msg_chat_id,msg_id,"*⇜ ( التنزيل ) معطل من قبل ا�
 end
 end
 if not Redis:sismember(Zelzal.."Zelzal:Origimators:Group"..msg_chat_id,Message_Reply.sender_id.user_id) then
-return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ من قبل مو منشئه ").Replly,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله منشئ مسبقا ").Replly,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:Origimators:Group"..msg_chat_id,Message_Reply.sender_id.user_id) 
-send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ ابشر نزلتها من المنشئات ").Replly,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله منشئ ").Replly,"md",true)  
 if Redis:get(Zelzal.."Zelzal:LogerGroupBot"..msg_chat_id) then
 local Get_Chat = bot.getChat(msg_chat_id)
 local Info_Chats = bot.getSupergroupFullInfo(msg_chat_id)
@@ -1508,11 +1508,11 @@ data = {
 }
 }
 local Loger_Id = Redis:get(Zelzal.."Zelzal:Loger:BotGroub"..msg.chat_id)
-send(Loger_Id,0,'\n*- مرحباً عزيزي المالك 🧚‍♀*\n*- هناك شخص قام بتنزيل احد من القروب 🤔*\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..Message_Reply.sender_id.user_id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
+send(Loger_Id,0,'\n*- مرحباً عزيزي المالك *\n*- هناك شخص قام بتنزيل احد من القروب *\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..Message_Reply.sender_id.user_id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
 end
 end
 end
-if TextMsg == "مديره" then
+if TextMsg == "مدير" then
 if not msg.Originators or not msg.Origimators then
 return send(msg_chat_id,msg_id,'\n*⇜ هذا الامر يخص* ( '..Controller_Num(5)..' ) ',"md",true)  
 end
@@ -1540,10 +1540,10 @@ return send(msg_chat_id,msg_id,"*⇜ ( التنزيل ) معطل من قبل ا�
 end
 end
 if not Redis:sismember(Zelzal.."Zelzal:Mamagers:Group"..msg_chat_id,Message_Reply.sender_id.user_id) then
-return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ من قبل مو مديره ").Replly,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله مدير مسبقا ").Replly,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:Mamagers:Group"..msg_chat_id,Message_Reply.sender_id.user_id) 
-send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ ابشر نزلتها من مديره ").Replly,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله مدير ").Replly,"md",true)  
 if Redis:get(Zelzal.."Zelzal:LogerGroupBot"..msg_chat_id) then
 local Get_Chat = bot.getChat(msg_chat_id)
 local Info_Chats = bot.getSupergroupFullInfo(msg_chat_id)
@@ -1574,11 +1574,11 @@ data = {
 }
 }
 local Loger_Id = Redis:get(Zelzal.."Zelzal:Loger:BotGroub"..msg.chat_id)
-send(Loger_Id,0,'\n*- مرحباً عزيزي المالك 🧚‍♀*\n*- هناك شخص قام بتنزيل احد من القروب 🤔*\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..Message_Reply.sender_id.user_id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
+send(Loger_Id,0,'\n*- مرحباً عزيزي المالك *\n*- هناك شخص قام بتنزيل احد من القروب *\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..Message_Reply.sender_id.user_id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
 end
 end
 end
-if TextMsg == "ادمونه" then
+if TextMsg == "ادمن" then
 if Redis:sismember(Zelzal.."Zelzal:Distinguishedall:Group",msg.sender_id.user_id) then
 testmod = true
 elseif msg.Managers or msg.Mamagers then
@@ -1618,10 +1618,10 @@ return send(msg_chat_id,msg_id,"*⇜ ( التنزيل ) معطل من قبل ا�
 end
 end
 if not Redis:sismember(Zelzal.."Zelzal:Mddictive:Group"..msg_chat_id,Message_Reply.sender_id.user_id) then
-return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ من قبل مو ادمونه ").Replly,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله ادمن مسبقا ").Replly,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:Mddictive:Group"..msg_chat_id,Message_Reply.sender_id.user_id) 
-send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ ابشر نزلتها من ادمونه ").Replly,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله ادمن ").Replly,"md",true)  
 if Redis:get(Zelzal.."Zelzal:LogerGroupBot"..msg_chat_id) then
 local Get_Chat = bot.getChat(msg_chat_id)
 local Info_Chats = bot.getSupergroupFullInfo(msg_chat_id)
@@ -1652,7 +1652,7 @@ data = {
 }
 }
 local Loger_Id = Redis:get(Zelzal.."Zelzal:Loger:BotGroub"..msg.chat_id)
-send(Loger_Id,0,'\n*- مرحباً عزيزي المالك 🧚‍♀*\n*- هناك شخص قام بتنزيل احد من القروب 🤔*\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..Message_Reply.sender_id.user_id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
+send(Loger_Id,0,'\n*- مرحباً عزيزي المالك *\n*- هناك شخص قام بتنزيل احد من القروب *\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..Message_Reply.sender_id.user_id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
 end
 end
 end
@@ -1694,10 +1694,10 @@ return send(msg_chat_id,msg_id,"*⇜ ( التنزيل ) معطل من قبل ا�
 end
 end
 if not Redis:sismember(Zelzal.."Zelzal:Mistinguished:Group"..msg_chat_id,Message_Reply.sender_id.user_id) then
-return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ من قبل مو مميزه ").Replly,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله مميز مسبقا ").Replly,"md",true)  
 else
 Redis:srem(Zelzal.."Zelzal:Mistinguished:Group"..msg_chat_id,Message_Reply.sender_id.user_id) 
-send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ ابشر نزلتها من مميزه ").Replly,"md",true)  
+send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله مميز ").Replly,"md",true)  
 if Redis:get(Zelzal.."Zelzal:LogerGroupBot"..msg_chat_id) then
 local Get_Chat = bot.getChat(msg_chat_id)
 local Info_Chats = bot.getSupergroupFullInfo(msg_chat_id)
@@ -1728,96 +1728,96 @@ data = {
 }
 }
 local Loger_Id = Redis:get(Zelzal.."Zelzal:Loger:BotGroub"..msg.chat_id)
-send(Loger_Id,0,'\n*- مرحباً عزيزي المالك 🧚‍♀*\n*- هناك شخص قام بتنزيل احد من القروب 🤔*\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..Message_Reply.sender_id.user_id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
+send(Loger_Id,0,'\n*- مرحباً عزيزي المالك *\n*- هناك شخص قام بتنزيل احد من القروب *\nٴ*⋆┄─┄─┄─┄┄─┄─┄─┄─┄┄⋆*\n*⇜ اسمه :* '..zname..' \n*⇜ ايديه :* '..msg.sender_id.user_id..'\n*⇜ يوزره :* @'..zuser..'\n*⇜ رتبته :* '..RinkBot..'\n\n*- معلومات الشخص المنزل :*\n*⇜ اسمه :* '..zzname..' \n*⇜ ايديه :* '..Message_Reply.sender_id.user_id..'\n*⇜ يوزره :* @'..zzuser..'\n*⇜ رتبته المنزله :* '..RinkkBot..'',"md",true, false, false, false, reply_markup)
 end
 end
 end
 if TextMsg == "خول" and not Redis:get(Zelzal.."amrthshesh"..msg.chat_id) then
 if UserInfo and UserInfo.type and UserInfo.type.luatele == "userTypeBot" then
-return send(msg_chat_id,msg_id,"\n*⇜ هييه ياورع .. مايمديك تهينني ؟!*","md",true)  
+return send(msg_chat_id,msg_id,"\n*⇜ عذرا عزيزي مايمديك تستخدم الامر عاى البوت!*","md",true)  
 end
 if UserInfo.id == 6642636501 or UserInfo.id == 6642636501 or UserInfo.id == 6642636501 then
-return send(msg_chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين مبرمج السورس*","md",true)  
+return send(msg_chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تستخدم الامر على(مبرمج السورس)*","md",true)  
 elseif UserInfo.id == 6642636501 then
-return send(msg_chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين مطور السورس*","md",true)  
+return send(msg_chat_id,msg_id,"*⇜عذرا عزيزي مايمديك تستخدم الامر على(مطور السورس) *","md",true)  
 elseif Redis:sismember(Zelzal.."Zelzal:MalekAsase:Group",UserInfo) then
-return send(msg_chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين المالك الاساسي*","md",true)  
+return send(msg_chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تستخدم الامر على(المالك الاساسي)*","md",true)  
 elseif Redis:sismember(Zelzal.."Zelzal:DevelopersQ:Groups",UserInfo) or Redis:sismember(Zelzal.."Zelzal:MevelopersQ:Groups",UserInfo) then
-return send(msg_chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين المطور الثانوي*","md",true)  
+return send(msg_chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تستخدم الامر على(Dev🎖️)*","md",true)  
 elseif Redis:sismember(Zelzal.."Zelzal:Developers:Groups",UserInfo) or Redis:sismember(Zelzal.."Zelzal:Mevelopers:Groups",UserInfo) then
-return send(msg_chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين المطور*","md",true)  
+return send(msg_chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تستخدم الامر على(Myth)*","md",true)  
 end
 if not Redis:sismember(Zelzal.."kholat:Group"..msg_chat_id,Message_Reply.sender_id.user_id) then
-return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله من الخولات قبل كدة 🙃 ").Reply,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله من الاغبياء مسبقا ").Reply,"md",true)  
 else
 Redis:srem(Zelzal.."kholat:Group"..msg_chat_id,Message_Reply.sender_id.user_id) 
-return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله من الخولات لازم ياخد دروس رجوله😂🌚 ").Reply,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله من الاغبياء ").Reply,"md",true)  
 end
 end
 if (TextMsg == "عروسه" or TextMsg == "عروسة") and not Redis:get(Zelzal.."amrthshesh"..msg.chat_id) then
 if UserInfo and UserInfo.type and UserInfo.type.luatele == "userTypeBot" then
-return send(msg_chat_id,msg_id,"\n*⇜ هييه ياورع .. مايمديك تهينني ؟!*","md",true)  
+return send(msg_chat_id,msg_id,"\n*⇜دذرا عزيزي مايمديك تستخدم الامر على البوت!*","md",true)  
 end
 if UserInfo.id == 6642636501 or UserInfo.id == 6642636501 or UserInfo.id == 6642636501 then
-return send(msg_chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين مبرمج السورس*","md",true)  
+return send(msg_chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تستخدم الامر على(مبرمج السورس)*","md",true)  
 elseif UserInfo.id == 6642636501 then
-return send(msg_chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين مطور السورس*","md",true)  
+return send(msg_chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تستخدم الامر على(مطور السورس)*","md",true)  
 elseif Redis:sismember(Zelzal.."Zelzal:MalekAsase:Group",UserInfo) then
-return send(msg_chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين المالك الاساسي*","md",true)  
+return send(msg_chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تستخدم الامر على(المالك الاساسي)*","md",true)  
 elseif Redis:sismember(Zelzal.."Zelzal:DevelopersQ:Groups",UserInfo) or Redis:sismember(Zelzal.."Zelzal:MevelopersQ:Groups",UserInfo) then
-return send(msg_chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين المطور الثانوي*","md",true)  
+return send(msg_chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تستخدم الامر على(Dev🎖️)*","md",true)  
 elseif Redis:sismember(Zelzal.."Zelzal:Developers:Groups",UserInfo) or Redis:sismember(Zelzal.."Zelzal:Mevelopers:Groups",UserInfo) then
-return send(msg_chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين المطور*","md",true)  
+return send(msg_chat_id,msg_id,"*⇜عذرا عزيزي مايمديك تستخدم الامر على(Myth)*","md",true)  
 end
 if not Redis:sismember(Zelzal.."wtka:Group"..msg_chat_id,Message_Reply.sender_id.user_id) then
-return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيلها من العروسات .. مسبقاً ").Replly,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيلها من العروسات مسبقاً ").Replly,"md",true)  
 else
 Redis:srem(Zelzal.."wtka:Group"..msg_chat_id,Message_Reply.sender_id.user_id) 
-return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيلها من العروسات بعد مانمسح مكياجها 😂🌚 ").Replly,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيلها من العروسات").Replly,"md",true)  
 end
 end
 if TextMsg == "مز" and not Redis:get(Zelzal.."amrthshesh"..msg.chat_id) then
 if UserInfo and UserInfo.type and UserInfo.type.luatele == "userTypeBot" then
-return send(msg_chat_id,msg_id,"\n*⇜ هييه ياورع .. مايمديك تهينني ؟!*","md",true)  
+return send(msg_chat_id,msg_id,"\n*⇜ عذرا عزيزي مايمديك تستخدم الامر على البوت!*","md",true)  
 end
 if UserInfo.id == 6642636501 or UserInfo.id == 6642636501 or UserInfo.id == 6642636501 then
-return send(msg_chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين مبرمج السورس*","md",true)  
+return send(msg_chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تستخدم الامر على(مبرمج السورس)*","md",true)  
 elseif UserInfo.id == 6642636501 then
-return send(msg_chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين مطور السورس*","md",true)  
+return send(msg_chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تستخدم الامر على(مطور السورس)*","md",true)  
 elseif Redis:sismember(Zelzal.."Zelzal:MalekAsase:Group",UserInfo) then
-return send(msg_chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين المالك الاساسي*","md",true)  
+return send(msg_chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تستخدم الامر على(المالك الاساسي)*","md",true)  
 elseif Redis:sismember(Zelzal.."Zelzal:DevelopersQ:Groups",UserInfo) or Redis:sismember(Zelzal.."Zelzal:MevelopersQ:Groups",UserInfo) then
-return send(msg_chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين المطور الثانوي*","md",true)  
+return send(msg_chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تستخدم الامر على(Dev🎖️)*","md",true)  
 elseif Redis:sismember(Zelzal.."Zelzal:Developers:Groups",UserInfo) or Redis:sismember(Zelzal.."Zelzal:Mevelopers:Groups",UserInfo) then
-return send(msg_chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين المطور*","md",true)  
+return send(msg_chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تستخدم الامر على(Myth)*","md",true)  
 end
 if not Redis:sismember(Zelzal.."moza:Group"..msg_chat_id,Message_Reply.sender_id.user_id) then
-return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ العضو ليس في قائمة المزز 🙃 ").Reply,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ العضو ليس في قائمة المزز  ").Reply,"md",true)  
 else
 Redis:srem(Zelzal.."moza:Group"..msg_chat_id,Message_Reply.sender_id.user_id) 
-return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله من قائمة المزز بعد ما ارتبط بسميره 😂🌚").Reply,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيله من قائمة المزز  ").Reply,"md",true)  
 end
 end
 if TextMsg == "مزه" and not Redis:get(Zelzal.."amrthshesh"..msg.chat_id) then
 if UserInfo and UserInfo.type and UserInfo.type.luatele == "userTypeBot" then
-return send(msg_chat_id,msg_id,"\n*⇜ هييه ياورع .. مايمديك تهينني ؟!*","md",true)  
+return send(msg_chat_id,msg_id,"\n*⇜ عذرا عزيزي مايمديك تستخدم الامر على البوت!*","md",true)  
 end
 if UserInfo.id == 6642636501 or UserInfo.id == 6642636501 or UserInfo.id == 6642636501 then
-return send(msg_chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين مبرمج السورس*","md",true)  
+return send(msg_chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تستخدم الامر على(مبرمج السورس)*","md",true)  
 elseif UserInfo.id == 6642636501 then
-return send(msg_chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين مطور السورس*","md",true)  
+return send(msg_chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تستخدم الامر على(مطور السورس)*","md",true)  
 elseif Redis:sismember(Zelzal.."Zelzal:MalekAsase:Group",UserInfo) then
-return send(msg_chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين المالك الاساسي*","md",true)  
+return send(msg_chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تستخدم الامر على(المالك الاساسي)*","md",true)  
 elseif Redis:sismember(Zelzal.."Zelzal:DevelopersQ:Groups",UserInfo) or Redis:sismember(Zelzal.."Zelzal:MevelopersQ:Groups",UserInfo) then
-return send(msg_chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين المطور الثانوي*","md",true)  
+return send(msg_chat_id,msg_id,"*⇜عذرا عزيزي مايمديك تستخدم الامر على(Dev🎖️)*","md",true)  
 elseif Redis:sismember(Zelzal.."Zelzal:Developers:Groups",UserInfo) or Redis:sismember(Zelzal.."Zelzal:Mevelopers:Groups",UserInfo) then
-return send(msg_chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك تهين المطور*","md",true)  
+return send(msg_chat_id,msg_id,"*⇜ عذرا عزيزي مايمديك تستخدم الامر على(Myth)*","md",true)  
 end
 if not Redis:sismember(Zelzal.."moza:Group"..msg_chat_id,Message_Reply.sender_id.user_id) then
-return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ العضوه ليست مزه 🙃 ").Replly,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ العضوه ليست مزه  ").Replly,"md",true)  
 else
 Redis:srem(Zelzal.."moza:Group"..msg_chat_id,Message_Reply.sender_id.user_id) 
-return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيلها من قائمة المزز بعد ما ارتبطت 🌚😹 ").Replly,"md",true)  
+return send(msg_chat_id,msg_id,Reply_Status(Message_Reply.sender_id.user_id,"⇜ تم تنزيلها من قائمة المزز     ").Replly,"md",true)  
 end
 end
 if TextMsg == "كلب" and not Redis:get(Zelzal.."amrthshesh"..msg.chat_id) then
