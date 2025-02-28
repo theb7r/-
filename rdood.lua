@@ -875,7 +875,7 @@ end
 local Message_Reply = bot.getMessage(msg.chat_id, msg.reply_to_message_id)
 Redis:srem(Zelzal.."mero:mrtee"..msg.chat_id, Message_Reply.sender_id.user_id)
 return send(msg.chat_id,msg_id,"*⇜ اهلا عزيزي\n⇜ تم تنزيل العضو زوجتك\nتم ازالتكم من قائمه المتزوجين\n✓️*","md") 
-elseif text== "رفع لوكي"  and msg.reply_to_message_id and not Redis:get(Zelzal.."amrthshesh"..msg.chat_id) then    
+elseif text== "salih"  and msg.reply_to_message_id and not Redis:get(Zelzal.."amrthshesh"..msg.chat_id) then    
 if UserInfo and UserInfo.type and UserInfo.type.luatele == "userTypeBot" then
 return send(msg.chat_id,msg_id,"\n*⇜ هييه ياورع .. مايمديك تهينني ؟!*","md",true)  
 end
@@ -897,8 +897,8 @@ return send(msg.chat_id,msg_id,"*⇜ هييه ياورع .. مايمديك ته�
 end
 local Message_Reply = bot.getMessage(msg.chat_id, msg.reply_to_message_id)
 Redis:sadd(Zelzal.."mero:loke"..msg.chat_id, Message_Reply.sender_id.user_id)
-return send(msg.chat_id,msg_id,"*⇜ اهلا عزيزي\n⇜ تم رفعه ضمن اللوكيه👨‍🦯😹\n✓️*","md") 
-elseif text== "تنزيل لوكي"  and msg.reply_to_message_id and not Redis:get(Zelzal.."amrthshesh"..msg.chat_id) then    
+return send(msg.chat_id,msg_id,"*⇜ اهلا عزيزي\n⇜ تم رفعه ضمن اللوكيه\n✓️*","md") 
+elseif text== "salih"  and msg.reply_to_message_id and not Redis:get(Zelzal.."amrthshesh"..msg.chat_id) then    
 if UserInfo and UserInfo.type and UserInfo.type.luatele == "userTypeBot" then
 return send(msg.chat_id,msg_id,"\n*⇜ هييه ياورع .. مايمديك تهينني ؟!*","md",true)  
 end
@@ -1301,7 +1301,7 @@ Redis:del(Zelzal..msg.chat_id..msg.sender_id.user_id.."my_heart:")
 return send(msg.chat_id,msg_id,"*⇜تم مسح قائمه قلبك*","md")
 end
 -------
-if text == "رفع صديق" or text == "رفع صديقي" then
+if text == "رفع صديق" or text == "salih" then
 if Redis:sismember(Zelzal.."Zelzal:Text:Cmd:Lock"..msg_chat_id,text) then
 if Locks_Status(msg.sender_id.user_id,msg,text) ~= "noon" then
 return send(msg_chat_id,msg_id,Locks_Status(msg.sender_id.user_id,msg,text),"md",true)
