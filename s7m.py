@@ -4,8 +4,8 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
 from bot import DEVS
 
-API_ID = int("8186557")
-API_HASH = "efd77b34c69c164ce158037ff5a0d117"
+API_ID = int("23090097")
+API_HASH = "3fb3746ba526a5b95fc8205d7015c0e5"
 Bots = []
 off =None
 ch = "CV_SS" # يوزر قناتك
