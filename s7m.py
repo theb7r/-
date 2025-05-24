@@ -8,17 +8,7 @@ API_ID = int("23090097")
 API_HASH = "3fb3746ba526a5b95fc8205d7015c0e5"
 Bots = []
 off =None
-ch = "CV_SS" # يوزر قناتك
-@Client.on_message(filters.private)
-async def me(client, message):
-   if off:#'‹ ٰ💸 ⇣ سورس ماثيو ⇣ 💸 › .'#
-    if not message.from_user.username in DEVS:
-     return await message.reply_text("الصانع معطل")
-   try:
-      await client.get_chat_member(ch, message.from_user.id)
-   except:
-      return await message.reply_text(f"يجب ان تشترك ف قناة السورس أولا \n https://t.me/{ch}")
-   message.continue_propagation()
+
 
 @Client.on_message(filters.command("start") & filters.private)
 async def start(client, message):
@@ -26,7 +16,7 @@ async def start(client, message):
      kep = ReplyKeyboardMarkup([["صنع بوت", "حذف بوت"], ["البوتات المصنوعه"], ["تعطيل المجاني", "تفعيل المجاني"], ["السورس"]], resize_keyboard=True)
      return await message.reply_text("اهلا بيك ف مصنع بوتات جوجل ميوزك", reply_markup=kep)
    kep = ReplyKeyboardMarkup([["صنع بوت", "حذف بوت"], ["السورس"]], resize_keyboard=True)
-   await message.reply_text("اهلا بيك ف مصنع بوتات جوجل ميوزك", reply_markup=kep)
+   await message.reply_text("اهلا بك ف مصنع بوتات ماثيو ميوزك", reply_markup=kep)
 
 @Client.on_message(filters.command(["السورس"], ""))
 async def alivehi(client: Client, message):
