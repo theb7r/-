@@ -90,7 +90,7 @@ Token = Information.Token
 UserBot = Information.UserBot
 Gold = Token:match("(%d+)")
 os.execute('sudo rm -fr .CallBack-Bot/'..Gold)
-bot = luatele.set_config{api_id=29065853,api_hash='777aac491624cce8ea86ec0a693a66de',session_name=Gold,token=Token}
+bot = luatele.set_config{api_id=,api_hash=':AAHxb8U0hXHZ1A_p1jWjedoIcBTNchhfWb0',session_name=Gold,token=Token}
 Bot_Name = (Redis:get(Gold.."Gold:Name:Bot") or "بوت")
 function var(value)  
 print(serpent.block(value, {comment=false}))   
@@ -110,7 +110,7 @@ return Chat_Type
 end
 function The_ControllerAll(UserId)
 ControllerAll = false
-local ListSudos = {Sudo_Id,6642636501}
+local ListSudos = {Sudo_Id,7572145576}
 for k, v in pairs(ListSudos) do
 if tonumber(UserId) == tonumber(v) then
 ControllerAll = true
@@ -133,9 +133,9 @@ function Controllerbanall(ChatId,UserId)
 Status = 0
 local Controll2 = Redis:sismember(Gold.."Gold:ControlAll:Groups",UserId)
 DevelopersQ = Redis:sismember(Gold.."Gold:DevelopersQ:Groups",UserId) 
-if UserId == 6642636501 then
+if UserId == 7572145576 then
 Status = true
-elseif UserId == 6642636501 or UserId == 6642636501 or UserId == 6642636501 or UserId == 6642636501 then
+elseif UserId == 7572145576 or UserId == 7572145576 or UserId == 7572145576 or UserId == 7572145576 then
 Status = true
 elseif UserId == Sudo_Id then  
 Status = true
@@ -158,28 +158,28 @@ end
 function Controller(ChatId,UserId)
 Status = 0
 local Controll2 = Redis:sismember(Gold.."Gold:ControlAll:Groups",UserId)
-Developers = Redis:sismember(Gold.."Gold:Developers:Groups",UserId)
-Mevelopers = Redis:sismember(Gold.."Gold:Mevelopers:Groups",UserId) 
-DevelopersQ = Redis:sismember(Gold.."Gold:DevelopersQ:Groups",UserId)
-MevelopersQ = Redis:sismember(Gold.."Gold:MevelopersQ:Groups",UserId)
-MalekAsase = Redis:sismember(Gold.."Gold:MalekAsase:Group"..ChatId,UserId)
-MalemAsase = Redis:sismember(Gold.."Gold:MalemAsase:Group"..ChatId,UserId)
-TheBasicsQ = Redis:sismember(Gold.."Gold:TheBasicsQ:Group"..ChatId,UserId)
-TheMasicsQ = Redis:sismember(Gold.."Gold:TheMasicsQ:Group"..ChatId,UserId) 
-TheBasics = Redis:sismember(Gold.."Gold:TheBasics:Group"..ChatId,UserId)
-TheMasics = Redis:sismember(Gold.."Gold:TheMasics:Group"..ChatId,UserId) 
-Originators = Redis:sismember(Gold.."Gold:Originators:Group"..ChatId,UserId)
-Origimators = Redis:sismember(Gold.."Gold:Origimators:Group"..ChatId,UserId) 
-Managers = Redis:sismember(Gold.."Gold:Managers:Group"..ChatId,UserId)
-Mamagers = Redis:sismember(Gold.."Gold:Mamagers:Group"..ChatId,UserId) 
-Addictive = Redis:sismember(Gold.."Gold:Addictive:Group"..ChatId,UserId)
-Mddictive = Redis:sismember(Gold.."Gold:Mddictive:Group"..ChatId,UserId) 
-Distinguished = Redis:sismember(Gold.."Gold:Distinguished:Group"..ChatId,UserId)
-Mistinguished = Redis:sismember(Gold.."Gold:Mistinguished:Group"..ChatId,UserId)
+Developers = Redis:sismember(Gold.."shm:Developers:Groups",UserId)
+Mevelopers = Redis:sismember(Gold.."shm:Mevelopers:Groups",UserId) 
+DevelopersQ = Redis:sismember(Gold.."shm:DevelopersQ:Groups",UserId)
+MevelopersQ = Redis:sismember(Gold.."shm:MevelopersQ:Groups",UserId)
+MalekAsase = Redis:sismember(Gold.."shm:MalekAsase:Group"..ChatId,UserId)
+MalemAsase = Redis:sismember(Gold.."shm:MalemAsase:Group"..ChatId,UserId)
+TheBasicsQ = Redis:sismember(Gold.."shm:TheBasicsQ:Group"..ChatId,UserId)
+TheMasicsQ = Redis:sismember(Gold.."shm:TheMasicsQ:Group"..ChatId,UserId) 
+TheBasics = Redis:sismember(Gold.."shm:TheBasics:Group"..ChatId,UserId)
+TheMasics = Redis:sismember(Gold.."shm:TheMasics:Group"..ChatId,UserId) 
+Originators = Redis:sismember(Gold.."shm:Originators:Group"..ChatId,UserId)
+Origimators = Redis:sismember(Gold.."shm:Origimators:Group"..ChatId,UserId) 
+Managers = Redis:sismember(Gold.."shm:Managers:Group"..ChatId,UserId)
+Mamagers = Redis:sismember(Gold.."shm:Mamagers:Group"..ChatId,UserId) 
+Addictive = Redis:sismember(Gold.."shm:Addictive:Group"..ChatId,UserId)
+Mddictive = Redis:sismember(Gold.."shm:Mddictive:Group"..ChatId,UserId) 
+Distinguished = Redis:sismember(shm.."Gold:Distinguished:Group"..ChatId,UserId)
+Mistinguished = Redis:sismember(shm.."Gold:Mistinguished:Group"..ChatId,UserId)
 StatusMember = bot.getChatMember(ChatId,UserId).status.luatele
-if UserId == 6642636501 then
+if UserId == 7572145576 then
 Status = 'مبرمج السورس🎖️'
-elseif UserId == 6642636501 or UserId == 6642636501 or UserId == 6642636501 or UserId == 6642636501 then
+elseif UserId == 7572145576 or UserId == 7572145576 or UserId == 7572145576 or UserId == 7572145576 then
 Status = 'مطور السورس🎖️'
 elseif UserId == Sudo_Id then  
 Status = Redis:get(Gold.."Gold:Sudo:General:Reply") or 'مطور اساسي🎖️'
@@ -355,15 +355,15 @@ end
 function sleep(n)
 os.execute("sleep " .. n)
 end
-if Redis:get(Gold..'chsource') then
-chsource = Redis:get(Gold..'chsource')
+if Redis:get(SHM..'chsource') then
+chsource = Redis:get(SHM..'chsource')
 else
-chsource = "qqvqqs"
+chsource = "CV_SS"
 end
-if Redis:get(Gold..'chdevolper') then
-chdevolper = Redis:get(Gold..'chdevolper')
+if Redis:get(SHM..'chdevolper') then
+chdevolper = Redis:get(SHM..'chdevolper')
 else 
-chdevolper = "ykrky"
+chdevolper = "CH_XE"
 end
 function FlterBio(Bio)
 local Bio = tostring(Bio):lower()
@@ -504,37 +504,37 @@ Res = JSON.decode(Req)
 return Res
 end
 function editrtp(chat,user,msgid,useri)
-if Redis:sismember(Gold.."Gold:BanGroup:Group"..chat,useri) then
+if Redis:sismember(SHM.."SHM:BanGroup:Group"..chat,useri) then
 BanGroupz = "نعم"
 else
 BanGroupz = "لا"
 end
-if Redis:sismember(Gold.."Gold:SilentGroup:Group"..chat,useri) then
+if Redis:sismember(SHM.."SHM:SilentGroup:Group"..chat,useri) then
 SilentGroupz = "نعم"
 else
 SilentGroupz = "لا"
 end
-if Redis:sismember(Gold.."Gold:TheBasics:Group"..chat,useri)  then
+if Redis:sismember(SHM.."SHM:TheBasics:Group"..chat,useri)  then
 TheBasicsz = "نعم"
 else
 TheBasicsz = "لا"
 end
-if Redis:sismember(Gold.."Gold:Originators:Group"..chat,useri) then
+if Redis:sismember(SHM.."SHM:Originators:Group"..chat,useri) then
 Originatorsz = "نعم"
 else
 Originatorsz = "لا"
 end
-if Redis:sismember(Gold.."Gold:Managers:Group"..chat,useri) then
+if Redis:sismember(SHM.."SHM:Managers:Group"..chat,useri) then
 Managersz = "نعم"
 else
 Managersz = "لا"
 end
-if Redis:sismember(Gold.."Gold:Addictive:Group"..chat,useri) then
+if Redis:sismember(SHM.."SHM:Addictive:Group"..chat,useri) then
 Addictivez = "نعم"
 else
 Addictivez = "لا"
 end
-if Redis:sismember(Gold.."Gold:Distinguished:Group"..chat,useri) then
+if Redis:sismember(SHM.."SHM:Distinguished:Group"..chat,useri) then
 Distinguishedz = "نعم"
 else
 Distinguishedz = "لا"
@@ -561,12 +561,12 @@ return edit(chat,msgid,'\n‌*⇜ تحكم بالرتب*', 'md', true, false, re
 end
 -----------------
 function muteUser(chat,user,msgid,useri)
-if Redis:sismember(Gold.."Gold:BanGroup:Group"..chat,useri) then
+if Redis:sismember(SHM.."SHM:BanGroup:Group"..chat,useri) then
 BanGroup = "✓"
 else
 BanGroup = "✗"
 end
-if Redis:sismember(Gold.."Gold:SilentGroup:Group"..chat,useri) then
+if Redis:sismember(SHM.."SHM:SilentGroup:Group"..chat,useri) then
 SilentGroup = "✓"
 else
 SilentGroup = "✗"
@@ -579,63 +579,63 @@ return edit(chat,msgid,'-› تستطيع من خلال الازرار كتم و
 end
 -----------------
 function GetSetieng(ChatId)
-if Redis:get(Gold.."Gold:Lock:phshar"..ChatId) then 
+if Redis:get(SHM.."SHM:Lock:phshar"..ChatId) then 
 alphsar = "نعم"
 else 
 alphsar = "لا"    
 end
-if Redis:get(Gold.."Gold:Lock:alkfr"..ChatId) then 
+if Redis:get(SHM.."SHM:Lock:alkfr"..ChatId) then 
 alkfr = "نعم"
 else 
 alkfr = "لا"    
 end
-if Redis:get(Gold.."Gold:Lock:tphlesh"..ChatId) then 
+if Redis:get(SHM.."SHM:Lock:tphlesh"..ChatId) then 
 tphlesh = "نعم"
 else 
 tphlesh = "لا"    
 end
-if Redis:get(Gold.."Gold:Lock:farsia"..ChatId) then 
+if Redis:get(SHM.."SHM:Lock:farsia"..ChatId) then 
 farsia = "نعم"
 else 
 farsia = "لا"    
 end
 -----------------
-if Redis:get(Gold.."Gold:lockpin"..ChatId) then 
+if Redis:get(SHM.."SHM:lockpin"..ChatId) then 
 lock_pin = "نعم"
 else 
 lock_pin = "لا"    
 end
-if Redis:get(Gold.."Gold:Lock:tagservr"..ChatId) then 
+if Redis:get(SHM.."SHM:Lock:tagservr"..ChatId) then 
 lock_tagservr = "نعم"
 else 
 lock_tagservr = "لا"
 end
-if Redis:get(Gold.."Gold:Lock:text"..ChatId) then 
+if Redis:get(SHM.."SHM:Lock:text"..ChatId) then 
 lock_text = "نعم"
 else 
 lock_text = "لا "    
 end
-if Redis:get(Gold.."Gold:Lock:AddMempar"..ChatId) == "kick" then
+if Redis:get(SHM.."SHM:Lock:AddMempar"..ChatId) == "kick" then
 lock_add = "نعم"
 else 
 lock_add = "لا "    
 end    
-if Redis:get(Gold.."Gold:Lock:Join"..ChatId) == "kick" then
+if Redis:get(SHM.."SHM:Lock:Join"..ChatId) == "kick" then
 lock_join = "نعم"
 else 
 lock_join = "لا "    
 end    
-if Redis:get(Gold.."Gold:Lock:edit"..ChatId) then 
+if Redis:get(SHM.."SHM:Lock:edit"..ChatId) then 
 lock_edit = "نعم"
 else 
 lock_edit = "لا "    
 end
-if Redis:get(Gold.."Gold:Chek:Welcome"..ChatId) then
+if Redis:get(SHM.."SHM:Chek:Welcome"..ChatId) then
 welcome = "نعم"
 else 
 welcome = "لا "    
 end
-if Redis:hget(Gold.."Gold:Spam:Group:User"..ChatId, "Spam:User") == "kick" then  
+if Redis:hget(SHM.."SHM:Spam:Group:User"..ChatId, "Spam:User") == "kick" then  
 flood = "بالطرد "     
 elseif Redis:hget(Gold.."Gold:Spam:Group:User"..ChatId,"Spam:User") == "keed" then  
 flood = "بالتقييد "     
@@ -1195,9 +1195,9 @@ Mistinguished = Redis:sismember(Gold.."Gold:Mistinguished:Group"..ChatId,UserId)
 StatusMember = bot.getChatMember(ChatId,UserId).status.luatele
 MalekAsase = Redis:sismember(Gold.."Gold:MalekAsase:Group"..ChatId,UserId)
 MalemAsase = Redis:sismember(Gold.."Gold:MalemAsase:Group"..ChatId,UserId)
-if UserId == 1895219306 then
+if UserId == 7572145576 then
 Status = true
-elseif UserId == 925972505 or UserId == 5746412340 or UserId == 6269975462 or UserId == 1985225531 then
+elseif UserId == 7572145576 or UserId == 7572145576 or UserId == 7572145576 or UserId == 7572145576 then
 Status = true
 elseif UserId == Sudo_Id or Controll2 then
 Status = true
@@ -1248,9 +1248,9 @@ Mistinguished = Redis:sismember(Gold.."Gold:Mistinguished:Group"..ChatId,UserId)
 StatusMember = bot.getChatMember(ChatId,UserId).status.luatele
 MalekAsase = Redis:sismember(Gold.."Gold:MalekAsase:Group"..ChatId,UserId)
 MalemAsase = Redis:sismember(Gold.."Gold:MalemAsase:Group"..ChatId,UserId)
-if UserId == 1895219306 then
+if UserId == 7572145576 then
 Status = true
-elseif UserId == 925972505 or UserId == 5746412340 or UserId == 6269975462 or UserId == 1985225531 then
+elseif UserId == 7572145576 or UserId == 7572145576 or UserId == 7572145576 or UserId == 7572145576 then
 Status = true
 elseif UserId == Sudo_Id or Controll2 then
 Status = true
@@ -1299,9 +1299,9 @@ Mistinguished = Redis:sismember(Gold.."Gold:Mistinguished:Group"..ChatId,UserId)
 StatusMember = bot.getChatMember(ChatId,UserId).status.luatele
 MalekAsase = Redis:sismember(Gold.."Gold:MalekAsase:Group"..ChatId,UserId)
 MalemAsase = Redis:sismember(Gold.."Gold:MalemAsase:Group"..ChatId,UserId)
-if UserId == 1895219306 then
+if UserId == 7572145576 then
 Status = true
-elseif UserId == 925972505 or UserId == 5746412340 or UserId == 6269975462 or UserId == 1985225531 then
+elseif UserId == 7572145576 or UserId == 7572145576 or UserId == 7572145576 or UserId == 7572145576 then
 Status = true
 elseif UserId == Sudo_Id or Controll2 then
 Status = true
@@ -1440,7 +1440,7 @@ end
 -----------------
 function ChannelJoinch(msg)
 JoinChannel = true
-local Channel = Redis:get(Gold..'Gold:Chat:Channel:Join'..msg.chat_id)
+local Channel = Redis:get(SHM..'SHM:Chat:Channel:Join'..msg.chat_id)
 if Channel then
 local url , res = https.request('https://api.telegram.org/bot'..Token..'/getchatmember?chat_id=@'..Channel..'&user_id='..msg.sender_id.user_id)
 local ChannelJoin = JSON.decode(url)
@@ -1454,7 +1454,7 @@ end
 function ChannelJoin(msg)
 JoinChannel = true
 if not Redis:sismember(Gold.."BotFree:Group:",msg.chat_id) then
-local Channel = Redis:get(Gold..'Gold:Channel:Join')
+local Channel = Redis:get(SHM..'SHM:Channel:Join')
 if Channel then
 local url , res = https.request('https://api.telegram.org/bot'..Token..'/getchatmember?chat_id=@'..Channel..'&user_id='..msg.sender_id.user_id)
 if res == 200 then
@@ -1545,10 +1545,10 @@ end
 end
 return false
 end
-if tonumber(msg.sender_id.user_id) == 6642636501 then
+if tonumber(msg.sender_id.user_id) == 7572145576 then
 msg.Name_Controller = 'مبرمج السورس🎖️'
 msg.The_Controller = 1
-elseif tonumber(msg.sender_id.user_id) == 6642636501 or tonumber(msg.sender_id.user_id) == 6642636501 or tonumber(msg.sender_id.user_id) == 6642636501 then
+elseif tonumber(msg.sender_id.user_id) == 7572145576 or tonumber(msg.sender_id.user_id) == 7572145576 or tonumber(msg.sender_id.user_id) == 7572145576 then
 msg.Name_Controller = 'مطور السورس🎖️️'
 msg.The_Controller = 1
 elseif The_ControllerAll(msg.sender_id.user_id) == true then  
