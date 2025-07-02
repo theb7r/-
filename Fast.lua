@@ -951,7 +951,7 @@ send(msg.chat_id,msg.id,"*✭قم بصنع بوتك الان •*","md",true, fa
 return false 
 end
 if text == '. السورس' or text == '✭ مبرمج السورس' or text == 'مطور السورس ✭' then  
-local UserId_Info = LuaTele.searchPublicChat("YKRKY")
+local UserId_Info = LuaTele.searchPublicChat("CH_XE")
 if UserId_Info.id then
 local UserInfo = LuaTele.getUser(UserId_Info.id)
 local InfoUser = LuaTele.getUserFullInfo(UserId_Info.id)
@@ -971,7 +971,7 @@ local TestText = "*✯ مبرمج سورس فولت ✭\n✯ ɴᴀᴍᴇ  >* [".
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = username, url = "https://t.me/YKRKY"}
+{text = username, url = "https://t.me/CH_XE"}
 }
 }
 local msg_id = msg.id/2097152/0.5 
