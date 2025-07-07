@@ -1,6 +1,6 @@
 <?php
-$Token = "توكنك";//توكنك//
-$admin = 2023947389;// ايديك //
+$Token = "توكنك";//7525686307:AAEBJVGOz-Z5JIh0xEx20soQPpl0B-ImFwM//
+$admin = ايديك;// 7934749229 //
 define("API_KEY",$Token);
 function bot($method, $datas=[]){
 $Saied_Botate = "https://api.telegram.org/bot".API_KEY."/".$method;
