@@ -5,9 +5,9 @@ import telebot
 from datetime import date ,timedelta ,time
 import time 
 ssss = '5024278507'
-bot = telebot.TeleBot("5496942470:AAFwqnSzxHMkHhr8uge395ghpiXwAyIHzj0")
+bot = telebot.TeleBot("8185475102:AAGbblpm--CRaSxPmOscmh4onXCgjrn-FxE")
 p3 = types.InlineKeyboardMarkup()
-p5 = types.InlineKeyboardButton(text = "[!] 𝗚𝗛𝗢𝗦𝗧 ^ 𝗦𝗢𝗨𝗥𝗖𝗘 🇰🇼",url="t.me/pjpppppp")
+p5 = types.InlineKeyboardButton(text = "[!] 𝗚𝗛𝗢𝗦𝗧 ^ 𝗦𝗢𝗨𝗥𝗖𝗘 🇰🇼",url="t.me/CH_XE")
 A1 = types.InlineKeyboardButton(text = "اوامر الحماية .",callback_data="A1")
 A2 = types.InlineKeyboardButton(text = "اوامر التسلية .",callback_data="A2")
 A3 = types.InlineKeyboardButton(text = "اوامر الالعاب .",callback_data="A3")
@@ -256,7 +256,7 @@ def start(message):
 	#if 'http' in message.text:
 #		bot.delete_message(id,messagesid)
 	if message.text == "ا" or message.text == "id" or message.text == "ايدي":
-		n = ["وففف تخبل 😍🤤",
+		n = ["جبر",
 "لزكت بيه دغيره 😒😒",
 "كلسا ايدي كلسا ايدي دكافي كبرر ",
 "ابه نيو شوفو صورتي ",
@@ -295,7 +295,7 @@ def start(message):
 	 	new_file.write(downloaded_file)
 	 	with open('new_file.png', 'rb') as photo:
 	 		bot.send_photo(message.chat.id, photo)
-	if message.text == "المجموعة" or message.text == "الكروب":
+	if message.text == "المجموعة" or message.text == "القروب":
 		j = message.chat.title
 		t = time.strftime("%p %H:%S")
 		l = bot.export_chat_invite_link(message.chat.id)
@@ -321,7 +321,7 @@ def start(message):
 	if m == ".":
 		f2 = message.from_user.first_name
 		p3 = types.InlineKeyboardMarkup()
-		p5 = types.InlineKeyboardButton(text = "🇰🇼",url="t.me/pjpppppp")
+		p5 = types.InlineKeyboardButton(text = "🇰🇼",url="t.me/CH_XE")
 		p3.add(p5)
 		bot.reply_to(message,f"{f2}",reply_markup=p3)
 	if '@' in message.text.lower():
@@ -348,9 +348,9 @@ def start(message):
 			bot.reply_to(message,"تم الغاء تثبيت الرسالة!") 
 	if m == "المطور" or m == "مطور" or m == "المبرمج":
 		p3 = types.InlineKeyboardMarkup()
-		e4 = types.InlineKeyboardButton(text = "المطور .",url="t.me/bbannd")
+		e4 = types.InlineKeyboardButton(text = "المطور .",url="t.me/CH_XE")
 		p3.add(e4)
-		h = """[مطور السورس .](t.me/bbannd)"""
+		h = """[مطور السورس .](t.me/CH_XE)"""
 		bot.reply_to(message,h,parse_mode="markdown",reply_markup=p3,disable_web_page_preview=True)
 		f2 = message.from_user.first_name
 		t2 = message.from_user.username
@@ -409,8 +409,8 @@ def start(message):
 	if message.text == "السورس" or message.text == "سورس":
 	    url = ["https://telegra.ph/file/5047bab5c7a88be186c93.jpg","https://telegra.ph/file/b69cb1ea62b6b63162aca.jpg","https://telegra.ph/file/c621f99ca961ffa2dafb8.jpg","https://telegra.ph/file/5571ba4345056196a6c2b.jpg"]
 	    p3 = types.InlineKeyboardMarkup()
-	    e3 = types.InlineKeyboardButton(text = "قناة السورس .",url="t.me/pjpppppp")
-	    e4 = types.InlineKeyboardButton(text = "المطور .",url="t.me/bbannd")
+	    e3 = types.InlineKeyboardButton(text = "قناة السورس .",url="t.me/CV_SS")
+	    e4 = types.InlineKeyboardButton(text = "المطور .",url="t.me/CH_XE")
 	    p3.add(e3,e4)
 	    r = random.choice(url)
 	    h = """اهلا بك عزيزي في سورس الشبح
