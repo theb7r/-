@@ -6,7 +6,7 @@ from datetime import date, timedelta
 
 # استخدم متغير بيئي لتخزين التوكن
 # قبل التشغيل، تأكد من ضبط المتغير TELEGRAM_BOT_TOKEN في بيئة النظام
-TOKEN = os.getenv("8185475102:AAGbblpm--CRaSxPmOscmh4onXCgjrn-FxE")
+TOKEN = os.getenv("")
 
 if not TOKEN:
     raise ValueError("يرجى ضبط متغير البيئة TELEGRAM_BOT_TOKEN")
