@@ -171,3 +171,64 @@ def handle_text(message):
     elif text in ["اسمي"]:
         f3 = message.from_user.last_name or ""
         bot.reply_to(message, *𖡋 𝐅𝐈𝐑𝐒𝐓 𝐍𝐀𝐌
+
+import logging
+from aiogram import Bot, Dispatcher, types
+from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from aiogram.enums import ParseMode
+from aiogram.filters import CommandStart
+from aiogram.utils.keyboard import InlineKeyboardBuilder
+from aiogram.utils import executor
+from aiogram import F
+
+import asyncio
+
+# حط التوكن الخاص في بوتك هنا
+API_TOKEN = '8185475102:AAGbblpm--CRaSxPmOscmh4onXCgjrn-FxE'
+
+# إعدادات اللوج
+logging.basicConfig(level=logging.INFO)
+
+# تعيين البوت والموزع
+bot = Bot(token=API_TOKEN, parse_mode=ParseMode.HTML)
+dp = Dispatcher()
+
+# ✅ الكيبورد المتطور
+def main_keyboard():
+    kb = InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="📤 رفع", callback_data="upload")],
+        [InlineKeyboardButton(text="📥 تنزيل", callback_data="download")],
+        [InlineKeyboardButton(text="📊 إحصائيات", callback_data="stats")],
+        [InlineKeyboardButton(text="👨‍💻 المطور", url="https://t.me/YOUR_USERNAME")],
+        [InlineKeyboardButton(text="📢 قناتنا", url="https://t.me/YOUR_CHANNEL")]
+    ])
+    return kb
+
+# ⬅️ أمر /start
+@dp.message(CommandStart())
+async def start(message: types.Message):
+    await message.answer(
+        f"أهلاً وسهلاً بك يا <b>{message.from_user.first_name}</b>!\n"
+        "استخدم الأزرار بالأسفل للتنقل في البوت 👇",
+        reply_markup=main_keyboard()
+    )
+
+# 🎯 التعامل مع الضغط على الأزرار
+@dp.callback_query(F.data == "upload")
+async def handle_upload(callback: types.CallbackQuery):
+    await callback.answer("ميزة الرفع قيد التطوير...")
+
+@dp.callback_query(F.data == "download")
+async def handle_download(callback: types.CallbackQuery):
+    await callback.answer("ميزة التنزيل قيد التطوير...")
+
+@dp.callback_query(F.data == "stats")
+async def handle_stats(callback: types.CallbackQuery):
+    await callback.answer("الإحصائيات حالياً غير متاحة...")
+
+# ✅ تشغيل البوت
+async def main():
+    await dp.start_polling(bot)
+
+if __name__ == "__main__":
+    asyncio.run(main())
