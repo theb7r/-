@@ -4,7 +4,7 @@ import asyncio
 # ekhbari.github.io
 api_id = ايبي
 api_hash = 'هاش'
-bot_token = 'توكن'
+bot_token = '7867489956:AAFDzQVIuAXLHtwzJno4hrLy9pXEWA22GvA'
 
 client = TelegramClient('session_bot', api_id, api_hash).start(bot_token=bot_token)
 
