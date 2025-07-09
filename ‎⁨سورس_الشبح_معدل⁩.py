@@ -4,14 +4,10 @@ import telebot
 from telebot import types
 from datetime import date, timedelta
 
-# استخدم متغير بيئي لتخزين التوكن
-# قبل التشغيل، تأكد من ضبط المتغير TELEGRAM_BOT_TOKEN في بيئة النظام
-TOKEN = os.getenv("")
+# توكن البوت مضاف مباشرة
+TOKEN = "8185475102:AAGbblpm--CRaSxPmOscmh4onXCgjrn-FxE"
 
-if not TOKEN:
-    raise ValueError("يرجى ضبط متغير البيئة TELEGRAM_BOT_TOKEN")
-
-bot = telebot.TeleBot(8185475102:AAGbblpm--CRaSxPmOscmh4onXCgjrn-FxE)
+bot = telebot.TeleBot(TOKEN)
 
 # إعداد الأزرار
 p3 = types.InlineKeyboardMarkup()
@@ -26,14 +22,15 @@ A4 = types.InlineKeyboardButton(text="اوامر الموسيقى ", callback_da
 def send_welcome(message):
     f2 = message.from_user.first_name or "مستخدم"
     t2 = message.from_user.username or "NoUsername"
+    msg = f"*اهلا بك عزيزي - *[{f2}](https://t.me/{t2})،\\n*  في بوت الاوامر، \\nلمعرفة اوامر البوت ارسل الاوامر*"
     try:
         bot.reply_to(
             message,
-            text=f"*اهلا بك عزيزي - *[{f2}](https://t.me/{t2})،\n*  في بوت الاوامر، \nلمعرفة اوامر البوت ارسل الاوامر*",
+            text=msg,
             disable_web_page_preview=True,
             parse_mode="Markdown"
         )
-    except Exception as e:
+    except Exception:
         bot.reply_to(message, "حدث خطأ أثناء عرض رسالة الترحيب.")
 
 # بدء البوت
