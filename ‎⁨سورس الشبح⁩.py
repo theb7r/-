@@ -170,7 +170,8 @@ def handle_text(message):
 
     elif text in ["اسمي"]:
         f3 = message.from_user.last_name or ""
-        bot.reply_to(message, *𖡋 𝐅𝐈𝐑𝐒𝐓 𝐍𝐀𝐌
+        name = message.from_user.first_name or "غير معروف"
+bot.reply_to(message, f"اسمك هو: {name}")
 
 import logging
 from aiogram import Bot, Dispatcher, types
