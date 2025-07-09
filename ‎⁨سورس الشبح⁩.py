@@ -168,11 +168,6 @@ def handle_text(message):
 
 الرسالة : {o}*""", disable_web_page_preview=True, parse_mode="markdown")
 
-    elif text in ["اسمي"]:
-        f3 = message.from_user.last_name or ""
-        name = message.from_user.first_name or "غير معروف"
-bot.reply_to(message, f"اسمك هو: {name}")
-
 import logging
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
