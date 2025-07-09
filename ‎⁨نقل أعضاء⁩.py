@@ -2,7 +2,7 @@ from telethon import TelegramClient, events, errors
 from telethon.tl.functions.channels import InviteToChannelRequest
 import asyncio
 # ekhbari.github.io
-api_id = ايبي
+api_id = "ايبي"
 api_hash = 'هاش'
 bot_token = '7867489956:AAFDzQVIuAXLHtwzJno4hrLy9pXEWA22GvA'
 
