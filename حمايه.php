@@ -7,10 +7,10 @@ Ch2 : DEV_1IRAQ
 */
 
 ob_start();
-$API_KEY = 'توكنك '; //add your bot token
+$API_KEY = '7659936507:AAG73xCd1YABfSJjBc4hwEZ9__MPQPeVZrQ '; //add your bot token
 $sudo = 637549705; // add your id
 $bot_id = 911271050; 
-$e = "@XT1TBOT";
+$e = "@J_BJBOT";
 define('API_KEY',$API_KEY);
 function bot($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
@@ -163,7 +163,7 @@ if ($new and $new->id == $bot_id) {
       'text'=>"💯¦ مـرحبآ آنآ بوت آسـمـي العملاق 🎖
 💰¦ آختصـآصـي حمـآيهہ‏‏ آلمـجمـوعآت
 📛¦ مـن آلسـبآم وآلتوجيهہ‏‏ وآلتگرآر وآلخ...
-⚖️¦ مـعرف آلمـطـور  : @XTLXTL👨🏽‍🔧",
+⚖️¦ مـعرف آلمـطـور  : @CH_XE👨🏽‍🔧",
     ]);
 }
 
