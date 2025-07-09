@@ -170,4 +170,4 @@ def handle_text(message):
 
     elif text in ["اسمي"]:
         f3 = message.from_user.last_name or ""
-        bot.reply_to(message, f"""*𖡋 𝐅𝐈𝐑𝐒𝐓 𝐍𝐀𝐌
+        bot.reply_to(message, *𖡋 𝐅𝐈𝐑𝐒𝐓 𝐍𝐀𝐌
