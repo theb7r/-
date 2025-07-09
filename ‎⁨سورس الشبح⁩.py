@@ -9,7 +9,7 @@ bot = telebot.TeleBot("8185475102:AAGbblpm--CRaSxPmOscmh4onXCgjrn-FxE")
 
 # لوحة أزرار رئيسية
 p3 = types.InlineKeyboardMarkup()
-p5 = types.InlineKeyboardButton(text="[!] 𝗚𝗛𝗢𝗦𝗧 ^ 𝗦𝗢𝗨𝗥𝗖𝗘 🇰🇼", url="t.me/CH_XE")
+p5 = types.InlineKeyboardButton(text="[!] s7m ^ 𝗦𝗢𝗨𝗥𝗖𝗘 🇰🇼", url="t.me/CH_XE")
 p3.add(p5)
 
 # قائمة أسئلة جاهزة (تأكدت من صياغتها بشكل صحيح)
