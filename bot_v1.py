@@ -17,10 +17,10 @@ from telegram import Update, InlineKeyboardMarkup, InlineKeyboardButton, ChatPer
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
 # هنا التوكن الخاص ببوتك👇
-TOKEN = 'هنا'
+TOKEN = '7739808268:AAEvFjD7uJRZ7-B8HVS92hfBoKplcHrPgAQ'
 
 # معرف قناة للإشتراك الإجباري
-CHANNEL_USERNAME = 'هنا'
+CHANNEL_USERNAME = '@QQICX1'
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
