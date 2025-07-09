@@ -11,7 +11,7 @@ TOKEN = os.getenv("8185475102:AAGbblpm--CRaSxPmOscmh4onXCgjrn-FxE")
 if not TOKEN:
     raise ValueError("يرجى ضبط متغير البيئة TELEGRAM_BOT_TOKEN")
 
-bot = telebot.TeleBot(TOKEN)
+bot = telebot.TeleBot(8185475102:AAGbblpm--CRaSxPmOscmh4onXCgjrn-FxE)
 
 # إعداد الأزرار
 p3 = types.InlineKeyboardMarkup()
