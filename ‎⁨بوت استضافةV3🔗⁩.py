@@ -34,9 +34,9 @@ logger = logging.getLogger("SecureBot")
 
 
 
-TOKEN = 'توكن'
-ADMIN_ID = 1896077619  # ايديك
-YOUR_USERNAME = '@يوزرك'  #  @ يوزرك مع
+TOKEN = '7819573158:AAHn019yVrRpBMZtfVmrSdV7fbiLJ9j5GlY'
+ADMIN_ID = 7934749229 # ايديك
+YOUR_USERNAME = '@CH_XE'  #  @ يوزرك مع
 CHANNEL_USERNAME = '@يوزر قناتك'  # يوزر القناة الإجبارية
 
 
