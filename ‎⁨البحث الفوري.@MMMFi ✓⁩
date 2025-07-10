@@ -7,7 +7,7 @@ from googlesearch import search
 import yt_dlp
 from telebot import types
 
-ToKen = 'TOKEN'  #TOKEN
+ToKen = '8023654354:AAFKKuKgqXeYo5MI3kufuxo0WwcBUDxdmqk'  #TOKEN
 bot = telebot.TeleBot(ToKen)
 
 def google_search(query):
