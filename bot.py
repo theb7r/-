@@ -7,12 +7,12 @@ import re
 import requests
 from io import BytesIO
 
-BOT_TOKEN = "توكن"
+BOT_TOKEN = "8023654354:AAFKKuKgqXeYo5MI3kufuxo0WwcBUDxdmqk"
 bot = telebot.TeleBot(BOT_TOKEN)
 
 search_results = {}
-CHANNEL_LINK = "https://t.me/priknm"
-BOT_NAME = "𝑴𝒊𝒌𝒆𝒚"
+CHANNEL_LINK = "https://t.me/CV_SS"
+BOT_NAME = "سهم"
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
