@@ -1,0 +1,91 @@
+
+#This bot is developed by Hamoudi AL-Amir 𓅂
+#Developer Channel | @MMMFi ✓.
+
+import telebot
+from googlesearch import search
+import yt_dlp
+from telebot import types
+
+ToKen = 'TOKEN'  #TOKEN
+bot = telebot.TeleBot(ToKen)
+
+def google_search(query):
+    links = []
+    for result in search(query, num_results=4, lang='ar'):
+        links.append(result)
+    return links
+
+def google_play_search(query):
+    links = []
+    for result in search(query + " site:play.google.com", num_results=4, lang='ar'):
+        links.append(result)
+    return links
+
+def youtube_search(query):
+    links = []
+    ydl_opts = {
+        'format': 'best',
+        'quiet': True,
+    }
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        result = ydl.extract_info(f"ytsearch:{query}", download=False)
+        for entry in result['entries']:
+            links.append(entry['url'])
+    return links
+
+@bot.message_handler(commands=['start'])
+def send_welcome(message):
+    markup = types.InlineKeyboardMarkup()
+    item_google = types.InlineKeyboardButton("- بحث في جوجل", callback_data="google_search")
+    item_youtube = types.InlineKeyboardButton("- بحث في اليوتيوب", callback_data="youtube_search")
+    item_google_play = types.InlineKeyboardButton("- بحث في جوجل بلي", callback_data="google_play_search")
+    markup.add(item_google, item_youtube)
+    markup.add(item_google_play)
+    item_channel = types.InlineKeyboardButton("- قناة المطور 🧑🏻‍💻", url="https://t.me/MMMFi")
+    markup.add(item_channel)
+    bot.reply_to(message,'*- مرحباً بك عزيزي 🙋🏻‍♂️\n\n• يمكنك من خلال هذا البوت البحث عن ما تريده باستخدام الاقسام في الاسفل 🔥\nكل ما عليك هو اختيار القسم الذي تريد البحث فية وأرسل الكلمة للبحث عنها وسيتم إرسال النتائج اليك ✅ .*', reply_markup=markup, parse_mode='Markdown')
+
+@bot.callback_query_handler(func=lambda call: True)
+def handle_callback_query(call):
+    if call.data == "google_search":
+        bot.send_message(call.message.chat.id, '*- أرسل كلمة البحث في Google:*', parse_mode='Markdown')
+        bot.register_next_step_handler(call.message, search_in_google)
+    elif call.data == "youtube_search":
+        bot.send_message(call.message.chat.id, '*- أرسل كلمة البحث في YouTube:*', parse_mode='Markdown')
+        bot.register_next_step_handler(call.message, search_in_youtube)
+    elif call.data == "google_play_search":
+        bot.send_message(call.message.chat.id, '*- أرسل كلمة البحث في Google Play:*', parse_mode='Markdown')
+        bot.register_next_step_handler(call.message, search_in_google_play)
+
+def search_in_google(message):
+    user_input = message.text
+    search_msg = bot.send_message(message.chat.id, '*- جاري البحث... 🔍*', parse_mode='Markdown')
+    search_results = google_search(user_input)
+    bot.delete_message(message.chat.id, search_msg.message_id)
+    
+    for link in search_results:
+        bot.send_message(message.chat.id, link)
+
+def search_in_google_play(message):
+    user_input = message.text
+    search_msg = bot.send_message(message.chat.id, '*- جاري البحث... 🔍*', parse_mode='Markdown')
+    search_results = google_play_search(user_input)
+    bot.delete_message(message.chat.id, search_msg.message_id)
+    
+    for link in search_results:
+        bot.send_message(message.chat.id, link)
+
+def search_in_youtube(message):
+    user_input = message.text
+    search_msg = bot.send_message(message.chat.id, '*- جاري البحث... 🔍*', parse_mode='Markdown')
+    search_results = youtube_search(user_input)
+    bot.delete_message(message.chat.id, search_msg.message_id)
+    
+    for link in search_results:
+        bot.send_message(message.chat.id, link)
+
+#This bot is developed by Hamoudi AL-Amir 𓅂
+#Developer Channel | @MMMFi ✓.
+
+bot.polling()
