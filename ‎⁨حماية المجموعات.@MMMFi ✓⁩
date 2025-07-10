@@ -9,7 +9,7 @@ from gtts import gTTS
 import random
 from telebot.types import ChatMember
 from telebot import types
-token = "TOKEN"   #توكنك
+token = "7819573158:AAHn019yVrRpBMZtfVmrSdV7fbiLJ9j5GlY"   #توكنك
 bot = telebot.TeleBot(token)
 btn = types.InlineKeyboardButton(text='صانع بوتات الامير 𓅂', url = "http://t.me/MOQ_Bot?start")
 @bot.message_handler(commands=["start"])
