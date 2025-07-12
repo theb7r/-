@@ -14,7 +14,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 # كن شريكًا في الحماية... ولا تكن سببًا في الانتهاك!
 '''
 
-BOT_TOKEN = os.getenv("BOT_TOKEN", "8005707124:AAHAzdYZnTOHoeEu7ouzGCoS7ZaJT2Bo7PY")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "7591256787:AAGZ2600PLhDGz__oM1wRYbD7vXTHotbSfA")
 API_ID = int(os.getenv("API_ID", 8186557))
 API_HASH = os.getenv("API_HASH", "efd77b34c69c164ce158037ff5a0d117")
 ADMIN_ID = 8122544723
