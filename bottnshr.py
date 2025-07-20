@@ -32,10 +32,10 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-API_ID = '8186557'
-API_HASH = 'efd77b34c69c164ce158037ff5a0d117'
-BOT_TOKEN = '711Yg'#توكن
-ADMIN_ID = 7245998635 #ايدي مطور
+API_ID = '23090097'
+API_HASH = '3fb3746ba526a5b95fc8205d7015c0e5'
+BOT_TOKEN = '7593580222:AAGw3bzn7qpJoYgUktp2pOydZwX9-z5XolM'#توكن
+ADMIN_ID = 7934749229 #ايدي مطور
 
 
 DEVS_FILE = "devs.json"
