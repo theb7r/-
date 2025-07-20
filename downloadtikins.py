@@ -2,7 +2,7 @@ import telebot
 import yt_dlp
 import os
 
-TOKEN = "token"
+TOKEN = "7910609107:AAEamniPWG2J5f8sQkKnUjv0nVu_yCGUtBE"
 bot = telebot.TeleBot(TOKEN)
 
 def download_video(url, platform):
