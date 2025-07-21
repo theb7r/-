@@ -931,7 +931,7 @@ bot('sendmessage',[
 'reply_markup'=>json_encode([
 'keyboard'=>[
 [['text'=>"꙳. تفعيل البوت"]],
-[['text'=>"꙳. رجوع"]],
+[['text'=>"꙳. العوده"]],
 ],
 'resize_keyboard'=>true
 ])
