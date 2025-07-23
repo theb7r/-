@@ -2,8 +2,8 @@
 #دليل فشلك هوه تغير الحقوقك 
 # @Repethone
 # @Sero_Bots
-$API_KEY = "توكنك"; // التوكن البوت
-$baha = array("ايديك", "0" ); //ايدي المطور 
+$API_KEY = "7819573158:AAHn019yVrRpBMZtfVmrSdV7fbiLJ9j5GlY"; // التوكن البوت
+$baha = array("7934749229", "0" ); //ايدي المطور 
 flush();
 ob_start();
 set_time_limit(0);
@@ -297,7 +297,8 @@ bot("sendphoto",[
   ]));
   }
 }
- #دليل فشلك هوه تغير الحقوقك 
+
+ #دليل فشلك هوه تغير الحقوقك 
 # @Repethone
 # @Sero_Bots
 
