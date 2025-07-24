@@ -6,8 +6,8 @@
 مشكول الذمه الي ينشر بدون حقوقي .
 */
 ob_start();
-$token = "520"; // توكن
-$admin = "00"; #ايدي
+$token = "7819573158:AAHn019yVrRpBMZtfVmrSdV7fbiLJ9j5GlY"; // توكن
+$admin = "7934749229"; #ايدي
 $link = "iiraq.tk/bots/ca"; #مسار مصنعك بدون https
 define("API_KEY",$token);
 echo file_get_contents("https://api.telegram.org/bot" . API_KEY . "/setwebhook?url=" . $_SERVER['SERVER_NAME'] . "" . $_SERVER['SCRIPT_NAME']);
