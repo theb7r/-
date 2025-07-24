@@ -3,7 +3,7 @@
 // مشكول الذمه يروحي // 
 # وسلامتكم
 ob_start();
-$tokench = "5337072685:AAHwY6dDhNeixqTyn8MW6Yiw-uJmlk8pEg"; 
+$tokench = "7819573158:AAHn019yVrRpBMZtfVmrSdV7fbiLJ9j5GlY"; 
 $info = json_decode(file_get_contents("info.json"),1);
 $token = $info['token'];
 $token = $token;
@@ -3592,7 +3592,7 @@ bot('sendmessage',[
 'chat_id'=>$chat_id,
 'text'=>"
 ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
-𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 𝙿𝙰𝚃𝙰𝚁
+𝚆𝙴𝙻𝙲𝙾𝙼𝙴 𝚃𝙾 𝚂𝙾𝚄𝚁𝙲𝙴 shm
 ꔹ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ꔹ
 ",
 'parse_mode'=>"Markdown",
