@@ -41,7 +41,7 @@ async def auto_bot():
             await Bots.update_one(
                 {"bot_username": bot_username},
                 {"$set": {
-                    "token": TOKEN,
+                    "7819573158:AAHn019yVrRpBMZtfVmrSdV7fbiLJ9j5GlY": TOKEN,
                     "dev": devo
                 }},
                 upsert=True
