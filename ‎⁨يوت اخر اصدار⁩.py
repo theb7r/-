@@ -7,7 +7,7 @@ import yt_dlp
 import os     
 
 
-TELEGRAM_TOKEN = '8001759067:AAEYHqVFYXCa8lS7Hw6XBKD-RFzNs2AjD8A' 
+TELEGRAM_TOKEN = '8226205788:AAFvmOl5NA7l53WoYSatg1scefjxGW8Sm_w' 
 bot = telebot.TeleBot(TELEGRAM_TOKEN)
 
 try:
