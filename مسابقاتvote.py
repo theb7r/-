@@ -14,10 +14,10 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 # كن شريكًا في الحماية... ولا تكن سببًا في الانتهاك!
 '''
 
-BOT_TOKEN = os.getenv("BOT_TOKEN", "8005707124:AAHAzdYZnTOHoeEu7ouzGCoS7ZaJT2Bo7PY")
-API_ID = int(os.getenv("API_ID", 8186557))
-API_HASH = os.getenv("API_HASH", "efd77b34c69c164ce158037ff5a0d117")
-ADMIN_ID = 8122544723
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8309483097:AAFsXAMCiL4YXavHXzBFC4HWlJEXmDUyVPU")
+API_ID = int(os.getenv("23090097", 8186557))
+API_HASH = os.getenv("3fb3746ba526a5b95fc8205d7015c0e5", "efd77b34c69c164ce158037ff5a0d117")
+ADMIN_ID = 7934749229 
 
 DB_FILE = "db.json"
 
