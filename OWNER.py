@@ -1,22 +1,22 @@
 # متطلبات التنصيب #
 
 #يوزر المطور
-OWNER = ["z1_xa"] 
-OWNER__ID = 6094238403
-OWNER_DEVELOPER = 6094238403
-OWNER_NAME = "ᯤ‌𝐀𝐁𝐁𝐀𝐒𝐌𝐎𝐎𝟓𝟓ᯤ‌"
+OWNER = ["CH_XE"] 
+OWNER__ID = 7934749229
+OWNER_DEVELOPER = 7934749229
+OWNER_NAME = "ᯤ‌S7M‌"
 #اسم التي سيظهر على صورة
-infophoto = "Alsayed Playing"
-DATABASE = "mongodb+srv://huSeen96:Huseenslah96@cluster0.ld2v7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0" 
+infophoto = "S7M Playing"
+DATABASE = "" 
 #قناة سورس
-CHANNEL = "https://t.me/z1_1ax"
+CHANNEL = "https://t.me/JO7NB"
 #كروب سورس
-GROUP = "https://t.me/z1_1ax"
+GROUP = "https://t.me/JO7NB"
 #فيديو سورس اذا ماعندك خليه
-VIDEO = "https://t.me/ABBBASDG/91"
+VIDEO = "https://t.me//"
 #صورة سورس اذا ماعندك خليها
 PHOTO = "https://t.me/ABBBASDG/15"
 #ساوي كروب وضيف عليه مصنع ورفعو اشراف وحط يوزر الكروب هنا
-LOGS = "ABBBASDG"
+LOGS = "JO7NB"
  
  
