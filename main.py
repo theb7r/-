@@ -16,6 +16,6 @@ db.set("bad_words",['كس','عير','طيز','زب','كسمك','كسختك','ط�
 plugins = dict(root="plugins")
 
 Client("x",
-api_id=3895828,
-api_hash="5229902a14b2512c35688aa152bd9f29",
-bot_token="5836188784:AAEShq1ZHXnQ0Ll7khfJPmTzGQVrjdXFWgs", plugins=plugins).run()
+api_id=23090097,
+api_hash="3fb3746ba526a5b95fc8205d7015c0e5",
+bot_token="7885256987:AAHvoBierdUJqzYfEwBt27Ig8Rocc9z_nIU", plugins=plugins).run()
