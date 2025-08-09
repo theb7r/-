@@ -1,8 +1,8 @@
 <?php
-$admin = "ايديك";
-$admin2 = "ايديك";
-$Dev = array("ايديك","ايديك");
-$token = "توكنك";
+$admin = "7934749229";
+$admin2 = "7934749229";
+$Dev = array("7934749229","7934749229");
+$token = "7910609107:AAFFRdj5TS0Xm75iXjZtrQ1UXNID7LQFDrQ";
   function bot($method,$datas=[]){
     $abuehab = http_build_query($datas);
         $url = "https://api.telegram.org/bot".$GLOBALS['token']."/".$method."?$abuehab";
@@ -1006,4 +1006,5 @@ unset($carlos["ban"][$key]);
 $carlos["ban"] = array_values($carlos["ban"]); 
 $carlos = json_encode($carlos,true);
 file_put_contents("data/carlos.json",$carlos);
+
 }
