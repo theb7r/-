@@ -17,9 +17,9 @@ from pyrogram.types import ChatPrivileges, ChatPermissions
 
 bot = Client(
     "m4o",
-    api_id=8186557,
-    api_hash="efd77b34c69c164ce158037ff5a0d117",
-    bot_token="7991511788:AAG_DUA7yZc2BBiVVYsx8WI8aa6x1k1pQqM",
+    api_id=23090097,
+    api_hash="3fb3746ba526a5b95fc8205d7015c0e5",
+    bot_token="8170570512:AAENlrqx734hwzL09gfou5-rAw5wzuG2IZU",
     plugins=dict(root="MZombie")
     )
 
